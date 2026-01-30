@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>ARKHIV-X | Public Records Division</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+
+    :root {
+      --bg-main: #0f1218;
+      --bg-dark: #12161c;
+      --bg-panel: #1a1f27;
+      --blue-main: #0f1c2e;
+      --blue-soft: #1c2b42;
+      --text-main: #e6e6e6;
+      --text-muted: #9aa3ad;
+      --accent: #3a5a8c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--bg-dark);
+      padding: 20px 40px;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(180deg, #0f1c2e, #0f1218);
+      padding: 60px 40px;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 40px;
+    }
+
+    .section h3 {
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    /* CASES */
+
+    .cases {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .case-card {
+      min-width: 260px;
+      background: var(--bg-panel);
+      padding: 20px;
+      border: 1px solid #222;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .case-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .case-card span {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .case-card h4 {
+      margin: 8px 0;
+    }
+
+    /* NEWS */
+
+    .news-item {
+      background: var(--bg-panel);
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--accent);
+      cursor: pointer;
+    }
+
+    .news-item:hover {
+      background: #202631;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--bg-dark);
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid #222;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>ARKHIV-X</h1>
+
+  <nav>
+    <a href="#">Casos</a>
+    <a href="#">Instituição</a>
+    <a href="#">Profissionais</a>
+    <a href="#">Carreira</a>
+    <a href="#">Concursos</a>
+    <a href="#">Arquivos</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <h2>Public Records Division</h2>
+
+  <p>
+    Sistema oficial de divulgação de investigações, análises
+    comportamentais e relatórios institucionais.
+  </p>
+
+  <button>Acessar relatório</button>
+
+</section>
+
+<section class="section">
+
+  <h3>Casos Recentes</h3>
+
+  <div class="cases">
+
+    <div class="case-card">
+      <span>CASO 041-B · Em andamento</span>
+      <h4>Distrito Industrial</h4>
+      <p>Homicídio com evidências manipuladas.</p>
+    </div>
+
+    <div class="case-card">
+      <span>CASO 038-A · Encerrado</span>
+      <h4>Residencial Severny</h4>
+      <p>Tripla fraude financeira.</p>
+    </div>
+
+    <div class="case-card">
+      <span>CASO 029-C · Arquivado</span>
+      <h4>Terminal Ferroviário</h4>
+      <p>Incêndio de origem criminosa.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <h3>Últimas Atualizações</h3>
+
+  <div class="news-item">
+    Concurso público preenche 780 vagas até início de 2026.
+  </div>
+
+  <div class="news-item">
+    Nova unidade regional é inaugurada em setor leste.
+  </div>
+
+  <div class="news-item">
+    Departamento passa por reestruturação interna.
+  </div>
+
+</section>
+
+<footer>
+
+  ARKHIV-X © 2026 · Public Security Network<br>
+  All rights reserved
+
+</footer>
+
+</body>
+</html>
