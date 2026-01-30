@@ -50,6 +50,23 @@ header {
   cursor: pointer;
 }
 
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 9;
+}
+
+.overlay.active {
+  display: block;
+}
+
 /* MENU */
 
 .menu {
@@ -67,6 +84,22 @@ header {
 
 .menu.active {
   right: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menu-header span {
+  font-size: 18px;
+}
+
+.close-btn {
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .menu a {
@@ -194,8 +227,6 @@ footer {
   border-top: 1px solid #222;
 }
 
-/* FILTER (para futuro) */
-
 .filter {
   filter: grayscale(30%) contrast(1.1);
 }
@@ -209,13 +240,21 @@ footer {
 
 <div class="logo">ARKHIV-X</div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="menu-btn" onclick="openMenu()">☰</div>
 
 </header>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
 <!-- MENU -->
 
 <div class="menu" id="menu">
+
+<div class="menu-header">
+  <span>Menu</span>
+  <div class="close-btn" onclick="closeMenu()">✕</div>
+</div>
 
 <a href="#">Casos</a>
 <a href="#">Instituição</a>
@@ -249,13 +288,9 @@ relatórios técnicos e análises comportamentais.
 
 <div class="case-list">
 
-<!-- CARD 1 -->
-
 <div class="case-card">
 
-<div class="case-img filter"
-style="background-image:url('https://images.unsplash.com/photo-1528740561666-dc2479dc08ab');">
-</div>
+<div class="case-img filter"></div>
 
 <div class="case-content">
 
@@ -267,13 +302,9 @@ style="background-image:url('https://images.unsplash.com/photo-1528740561666-dc2
 
 </div>
 
-<!-- CARD 2 -->
-
 <div class="case-card">
 
-<div class="case-img filter"
-style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');">
-</div>
+<div class="case-img filter"></div>
 
 <div class="case-content">
 
@@ -285,13 +316,9 @@ style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14
 
 </div>
 
-<!-- CARD 3 -->
-
 <div class="case-card">
 
-<div class="case-img filter"
-style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
-</div>
+<div class="case-img filter"></div>
 
 <div class="case-content">
 
@@ -327,8 +354,6 @@ Departamento passa por reestruturação interna.
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
 ARKHIV-X © 2026 · Public Security Network<br>
@@ -338,8 +363,14 @@ All Rights Reserved
 
 <script>
 
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
+function openMenu() {
+  document.getElementById("menu").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeMenu() {
+  document.getElementById("menu").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
 }
 
 </script>
