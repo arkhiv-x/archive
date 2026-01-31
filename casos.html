@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Arquivo de Casos | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root {
+  --bg-main: #0f1218;
+  --bg-dark: #12161c;
+  --bg-panel: #1a1f27;
+  --text-main: #e6e6e6;
+  --text-muted: #9aa3ad;
+  --accent: #3a5a8c;
+  --green: #6fa36f;
+  --yellow: #c8b45b;
+  --red: #b25b5b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* HEADER */
+
+header {
+  background: var(--bg-dark);
+  padding: 18px 25px;
+  border-bottom: 1px solid #222;
+}
+
+header a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* MAIN */
+
+.main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 25px;
+}
+
+.main h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* LIST */
+
+.case-list {
+  background: var(--bg-panel);
+  border: 1px solid #222;
+}
+
+.case {
+  padding: 18px 22px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.case:last-child {
+  border-bottom: none;
+}
+
+.case:hover {
+  background: #171c24;
+}
+
+/* INFO */
+
+.case-info h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.case-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* STATUS */
+
+.status {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.open {
+  background: rgba(200,180,91,0.15);
+  color: var(--yellow);
+}
+
+.closed {
+  background: rgba(111,163,111,0.15);
+  color: var(--green);
+}
+
+.archived {
+  background: rgba(178,91,91,0.15);
+  color: var(--red);
+}
+
+/* LINK */
+
+.case a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case a:hover {
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html">← Voltar ao painel</a>
+</header>
+
+<div class="main">
+
+<h1>Arquivo Central de Investigações</h1>
+
+<p class="subtitle">
+Sistema oficial de consulta — acesso público monitorado
+</p>
+
+<div class="case-list">
+
+<!-- CASO 041 -->
+
+<div class="case">
+
+<a href="caso-041.html">
+
+<div class="case-info">
+
+<h2>041-B — Distrito Industrial</h2>
+
+<p>
+Homicídio | Última atualização: 18/01/2026
+</p>
+
+</div>
+
+<div class="status open">
+EM ANDAMENTO
+</div>
+
+</a>
+
+</div>
+
+<!-- CASO 038 -->
+
+<div class="case">
+
+<a href="caso-038.html">
+
+<div class="case-info">
+
+<h2>038-A — Residencial Severny</h2>
+
+<p>
+Homicídio múltiplo | Atualizado: 09/12/2025
+</p>
+
+</div>
+
+<div class="status closed">
+ENCERRADO
+</div>
+
+</a>
+
+</div>
+
+<!-- CASO 029 -->
+
+<div class="case">
+
+<a href="caso-029.html">
+
+<div class="case-info">
+
+<h2>029-C — Distrito Portuário</h2>
+
+<p>
+Silenciamento corporativo | Atualizado: 03/11/2025
+</p>
+
+</div>
+
+<div class="status closed">
+ENCERRADO
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+ARKHIV-X — Banco de Dados Institucional
+
+</footer>
+
+</div>
+
+</body>
+</html>
