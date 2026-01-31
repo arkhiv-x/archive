@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Casos Ativos | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+  --green:#4caf50;
+  --yellow:#d4b02a;
+  --red:#c45a5a;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+  background:var(--bg-dark);
+  padding:18px 25px;
+  border-bottom:1px solid #222;
+}
+
+header a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* MAIN */
+
+.main{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 25px;
+}
+
+h1{
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.subtitle{
+  font-size:14px;
+  color:var(--text-muted);
+  margin-bottom:35px;
+}
+
+/* LISTA */
+
+.cases{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+
+.case{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.code{
+  font-size:13px;
+  color:var(--accent);
+  font-weight:bold;
+}
+
+.title{
+  font-size:16px;
+}
+
+.meta{
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+.status{
+  font-size:12px;
+  font-weight:bold;
+}
+
+.status.green{ color:var(--green); }
+.status.yellow{ color:var(--yellow); }
+.status.red{ color:var(--red); }
+
+.btn{
+  margin-top:10px;
+  padding:8px 12px;
+  background:var(--accent);
+  border:none;
+  color:white;
+  font-size:13px;
+  cursor:pointer;
+  text-align:center;
+  text-decoration:none;
+  border-radius:3px;
+}
+
+.btn:hover{
+  opacity:0.85;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:40px;
+  text-align:center;
+  font-size:12px;
+  color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="painel-aleksei.html">← Voltar ao painel</a>
+</header>
+
+<div class="main">
+
+<h1>Casos Ativos</h1>
+
+<p class="subtitle">
+Processos em andamento sob análise comportamental e supervisão técnica.
+</p>
+
+<div class="cases">
+
+<!-- CASO 1 -->
+<div class="case">
+<div class="code">041-B</div>
+<div class="title">Desaparecimento — Zona Norte</div>
+<div class="meta">
+Prioridade: Alta<br>
+Atualização: 28/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status red">EM ANDAMENTO</div>
+<a href="caso-041-b.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 2 -->
+<div class="case">
+<div class="code">052-D</div>
+<div class="title">Homicídios em Série — Área Portuária</div>
+<div class="meta">
+Prioridade: Alta<br>
+Atualização: 26/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status red">EM ANDAMENTO</div>
+<a href="caso-052-d.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 3 -->
+<div class="case">
+<div class="code">019-A</div>
+<div class="title">Fraude Institucional</div>
+<div class="meta">
+Prioridade: Média<br>
+Atualização: 24/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status yellow">EM ANÁLISE</div>
+<a href="caso-019-a.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 4 -->
+<div class="case">
+<div class="code">033-F</div>
+<div class="title">Sequestro — Região Central</div>
+<div class="meta">
+Prioridade: Alta<br>
+Atualização: 23/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status red">EM ANDAMENTO</div>
+<a href="caso-033-f.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 5 -->
+<div class="case">
+<div class="code">027-C</div>
+<div class="title">Tráfico Humano — Rotas Interestaduais</div>
+<div class="meta">
+Prioridade: Média<br>
+Atualização: 21/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status yellow">EM ANÁLISE</div>
+<a href="caso-027-c.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 6 -->
+<div class="case">
+<div class="code">044-E</div>
+<div class="title">Extorsão Digital</div>
+<div class="meta">
+Prioridade: Baixa<br>
+Atualização: 19/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status green">MONITORAMENTO</div>
+<a href="caso-044-e.html" class="btn">Ver dossiê</a>
+</div>
+
+<!-- CASO 7 -->
+<div class="case">
+<div class="code">015-H</div>
+<div class="title">Crime Corporativo — Setor Financeiro</div>
+<div class="meta">
+Prioridade: Média<br>
+Atualização: 17/01/2026<br>
+Analista: A. Dmitriev
+</div>
+<div class="status yellow">EM ANÁLISE</div>
+<a href="caso-015-h.html" class="btn">Ver dossiê</a>
+</div>
+
+</div>
+
+<footer>
+ARKHIV-X — Sistema Interno Monitorado
+</footer>
+
+</div>
+
+</body>
+</html>
