@@ -14,6 +14,7 @@
   --text-main:#e6e6e6;
   --text-muted:#9aa3ad;
   --accent:#3a5a8c;
+  --red:#b25b5b;
 }
 
 *{
@@ -38,7 +39,7 @@ body{
   background:var(--bg-panel);
   border:1px solid #222;
   padding:35px 40px;
-  width:320px;
+  width:330px;
   text-align:center;
 }
 
@@ -60,7 +61,7 @@ body{
 input{
   width:100%;
   padding:10px;
-  margin-bottom:15px;
+  margin-bottom:12px;
   background:#12161c;
   border:1px solid #222;
   color:#fff;
@@ -88,6 +89,15 @@ button:hover{
   opacity:0.9;
 }
 
+/* ERRO */
+
+.error{
+  display:none;
+  margin-bottom:12px;
+  font-size:12px;
+  color:var(--red);
+}
+
 /* AVISO */
 
 .warning{
@@ -110,16 +120,22 @@ button:hover{
 Sistema de Acesso Interno
 </p>
 
-<form action="painel.html">
+<div class="error" id="error">
+Credenciais inválidas.
+</div>
+
+<form onsubmit="login(event)">
 
 <input 
 type="text" 
-placeholder="Identificação funcional"
+id="user"
+placeholder="Nome completo"
 required>
 
 <input 
-type="password" 
-placeholder="Credencial de acesso"
+type="text" 
+id="id"
+placeholder="ID funcional"
 required>
 
 <button type="submit">
@@ -134,6 +150,68 @@ Atividades são monitoradas.
 </p>
 
 </div>
+
+<script>
+
+/* USUÁRIOS */
+
+const users = [
+
+{
+  name: "Aleksei Pavlovich Dmitriev",
+  id: "94721-03",
+  page: "painel-alek.html"
+},
+
+{
+  name: "Larisa Morozova",
+  id: "95284-11",
+  page: "painel-larisa.html"
+},
+
+{
+  name: "Mikhail Voronov",
+  id: "93840-07",
+  page: "painel-mikhail.html"
+},
+
+{
+  name: "Anna Lebedeva",
+  id: "96155-02",
+  page: "painel-anna.html"
+},
+
+{
+  name: "Sergei Petrov",
+  id: "92974-19",
+  page: "painel-sergei.html"
+}
+
+];
+
+/* LOGIN */
+
+function login(e){
+
+  e.preventDefault();
+
+  const user = document.getElementById("user").value.trim();
+  const id = document.getElementById("id").value.trim();
+  const error = document.getElementById("error");
+
+  const found = users.find(u =>
+    u.name === user && u.id === id
+  );
+
+  if(found){
+    window.location.href = found.page;
+  } else {
+    error.style.display = "block";
+  }
+
+}
+
+</script>
 
 </body>
 </html>
