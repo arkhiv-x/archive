@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Acesso Interno | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+/* CONTAINER */
+
+.login-box{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  padding:35px 40px;
+  width:320px;
+  text-align:center;
+}
+
+/* TITULO */
+
+.login-box h1{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.subtitle{
+  font-size:12px;
+  color:var(--text-muted);
+  margin-bottom:25px;
+}
+
+/* INPUTS */
+
+input{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  background:#12161c;
+  border:1px solid #222;
+  color:#fff;
+  font-size:14px;
+}
+
+input:focus{
+  outline:none;
+  border-color:var(--accent);
+}
+
+/* BOTAO */
+
+button{
+  width:100%;
+  padding:10px;
+  background:var(--accent);
+  border:none;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:0.9;
+}
+
+/* AVISO */
+
+.warning{
+  margin-top:18px;
+  font-size:11px;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>ARKHIV-X</h1>
+
+<p class="subtitle">
+Sistema de Acesso Interno
+</p>
+
+<form action="painel.html">
+
+<input 
+type="text" 
+placeholder="Identificação funcional"
+required>
+
+<input 
+type="password" 
+placeholder="Credencial de acesso"
+required>
+
+<button type="submit">
+Acessar sistema
+</button>
+
+</form>
+
+<p class="warning">
+Acesso restrito a usuários autorizados.<br>
+Atividades são monitoradas.
+</p>
+
+</div>
+
+</body>
+</html>
