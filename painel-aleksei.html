@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Painel Interno | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --bg-light:#1f2530;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+  --green:#6fa36f;
+  --yellow:#c8b45b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+  display:flex;
+  min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  width:230px;
+  background:var(--bg-dark);
+  border-right:1px solid #222;
+  display:flex;
+  flex-direction:column;
+}
+
+.logo{
+  padding:20px;
+  border-bottom:1px solid #222;
+  font-size:16px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.menu{
+  flex:1;
+}
+
+.menu a{
+  display:block;
+  padding:14px 20px;
+  text-decoration:none;
+  color:var(--text-main);
+  font-size:14px;
+  border-bottom:1px solid #1a1f27;
+}
+
+.menu a:hover{
+  background:var(--bg-panel);
+}
+
+.logout{
+  border-top:1px solid #222;
+}
+
+.logout a{
+  color:#b25b5b;
+}
+
+/* MAIN */
+
+.main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* TOPBAR */
+
+.topbar{
+  background:var(--bg-dark);
+  border-bottom:1px solid #222;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.topbar h1{
+  font-size:18px;
+  font-weight:normal;
+}
+
+.user-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.user-box img{
+  width:42px;
+  height:56px;
+  object-fit:cover;
+  border:1px solid #222;
+}
+
+.user-info{
+  font-size:12px;
+  line-height:1.4;
+}
+
+/* CONTENT */
+
+.content{
+  padding:30px 25px;
+  flex:1;
+  background:var(--bg-light);
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.card{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  padding:18px;
+}
+
+.card h2{
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* TABLE */
+
+.table-box{
+  background:var(--bg-panel);
+  border:1px solid #222;
+}
+
+.table-box h2{
+  padding:15px 18px;
+  border-bottom:1px solid #222;
+  font-size:15px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+td,th{
+  padding:10px 12px;
+  border-bottom:1px solid #222;
+  font-size:13px;
+  text-align:left;
+}
+
+th{
+  color:var(--text-muted);
+  font-weight:normal;
+}
+
+.status-active{
+  color:var(--green);
+}
+
+.status-pending{
+  color:var(--yellow);
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  font-size:11px;
+  color:var(--text-muted);
+  padding:10px;
+  border-top:1px solid #222;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+ARKHIV-X | Interno
+</div>
+
+<div class="menu">
+
+<a href="#">Visão Geral</a>
+<a href="#">Casos Ativos</a>
+<a href="#">Relatórios</a>
+<a href="#">Arquivos</a>
+<a href="#">Análises</a>
+<a href="#">Perfil</a>
+
+</div>
+
+<div class="logout">
+
+<a href="login.html">Encerrar Sessão</a>
+
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<h1>Painel Operacional</h1>
+
+<div class="user-box">
+
+<!-- COLOQUE A FOTO AQUI -->
+<img src="alek.jpg" alt="Aleksei">
+
+<div class="user-info">
+
+Aleksei P. Dmitriev<br>
+ID: 94721-03<br>
+Status: <span class="status-active">Ativo</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+<!-- CARDS -->
+
+<div class="grid">
+
+<div class="card">
+<h2>Casos Ativos</h2>
+<p>1</p>
+</div>
+
+<div class="card">
+<h2>Relatórios Pendentes</h2>
+<p>2</p>
+</div>
+
+<div class="card">
+<h2>Arquivos Privados</h2>
+<p>14</p>
+</div>
+
+<div class="card">
+<h2>Acessos Recentes</h2>
+<p>7</p>
+</div>
+
+</div>
+
+<!-- TABLE -->
+
+<div class="table-box">
+
+<h2>Últimas Atividades</h2>
+
+<table>
+
+<tr>
+<th>Data</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>29/01/2026</td>
+<td>Relatório</td>
+<td>Análise Caso 041-B</td>
+<td class="status-pending">Pendente</td>
+</tr>
+
+<tr>
+<td>27/01/2026</td>
+<td>Acesso</td>
+<td>Consulta Arquivos Sigilosos</td>
+<td class="status-active">Concluído</td>
+</tr>
+
+<tr>
+<td>25/01/2026</td>
+<td>Upload</td>
+<td>Material Pericial — Setor Norte</td>
+<td class="status-active">Concluído</td>
+</tr>
+
+<tr>
+<td>22/01/2026</td>
+<td>Revisão</td>
+<td>Relatório 024-B</td>
+<td class="status-active">Concluído</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+ARKHIV-X — Sistema Interno Monitorado
+
+</div>
+
+</div>
+
+</body>
+</html>
