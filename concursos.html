@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Concursos | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root {
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+  --green:#6fa36f;
+  --red:#b25b5b;
+  --yellow:#c8b45b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+}
+
+header{
+  background:var(--bg-dark);
+  padding:18px 25px;
+  border-bottom:1px solid #222;
+}
+
+header a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.main{
+  max-width:900px;
+  margin:auto;
+  padding:40px 25px;
+}
+
+.main h1{
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.subtitle{
+  color:var(--text-muted);
+  font-size:14px;
+  margin-bottom:30px;
+}
+
+/* LISTA */
+
+.list{
+  background:var(--bg-panel);
+  border:1px solid #222;
+}
+
+/* ITEM */
+
+.item{
+  padding:20px 22px;
+  border-bottom:1px solid #222;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.item:last-child{
+  border-bottom:none;
+}
+
+.item h2{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.item p{
+  font-size:13px;
+  color:#ddd;
+  line-height:1.6;
+}
+
+.meta{
+  font-size:12px;
+  color:var(--text-muted);
+  margin-top:4px;
+}
+
+/* STATUS */
+
+.status{
+  font-size:12px;
+  padding:5px 10px;
+  border-radius:3px;
+  letter-spacing:0.4px;
+  white-space:nowrap;
+}
+
+.open{
+  background:rgba(200,180,91,0.15);
+  color:var(--yellow);
+}
+
+.closed{
+  background:rgba(111,163,111,0.15);
+  color:var(--green);
+}
+
+.suspended{
+  background:rgba(178,91,91,0.15);
+  color:var(--red);
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:40px;
+  text-align:center;
+  font-size:12px;
+  color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html">← Voltar ao painel</a>
+</header>
+
+<div class="main">
+
+<h1>Editais e Processos Seletivos</h1>
+
+<p class="subtitle">
+Publicações oficiais — versão resumida
+</p>
+
+<div class="list">
+
+<!-- ABERTO -->
+
+<div class="item">
+
+<div>
+
+<h2>Edital 04/2026 — Analista Criminal</h2>
+
+<p>
+Vagas: 18<br>
+Área: Análise comportamental e dados
+</p>
+
+<div class="meta">
+Inscrições: 12/01/2026 a 28/02/2026
+</div>
+
+</div>
+
+<div class="status open">
+ABERTO
+</div>
+
+</div>
+
+<!-- FECHADO -->
+
+<div class="item">
+
+<div>
+
+<h2>Edital 11/2025 — Perícia Técnica</h2>
+
+<p>
+Vagas: 24<br>
+Área: Evidências físicas e laboratoriais
+</p>
+
+<div class="meta">
+Encerrado em: 19/09/2025
+</div>
+
+</div>
+
+<div class="status closed">
+ENCERRADO
+</div>
+
+</div>
+
+<!-- SUSPENSO -->
+
+<div class="item">
+
+<div>
+
+<h2>Edital 07/2024 — Inteligência Digital</h2>
+
+<p>
+Vagas: 12<br>
+Área: Monitoramento e rastreamento
+</p>
+
+<div class="meta">
+Suspenso em: 03/05/2024
+</div>
+
+</div>
+
+<div class="status suspended">
+SUSPENSO
+</div>
+
+</div>
+
+<!-- FECHADO -->
+
+<div class="item">
+
+<div>
+
+<h2>Edital 02/2023 — Investigação Operacional</h2>
+
+<p>
+Vagas: 30<br>
+Área: Campo e logística
+</p>
+
+<div class="meta">
+Encerrado em: 14/08/2023
+</div>
+
+</div>
+
+<div class="status closed">
+ENCERRADO
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+ARKHIV-X — Central de Editais
+
+</footer>
+
+</div>
+
+</body>
+</html>
