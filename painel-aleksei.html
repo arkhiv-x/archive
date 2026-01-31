@@ -156,6 +156,7 @@ body{
 .table-box{
   background:var(--bg-panel);
   border:1px solid #222;
+  margin-bottom:30px;
 }
 
 .table-box h2{
@@ -187,6 +188,40 @@ th{
 
 .status-pending{
   color:var(--yellow);
+}
+
+/* FOLDERS */
+
+.folder-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:25px;
+  padding:25px;
+}
+
+.folder{
+  background:#1a1f27;
+  border:1px solid #222;
+  padding:20px 10px;
+  text-align:center;
+  text-decoration:none;
+  color:#e6e6e6;
+  transition:0.2s;
+}
+
+.folder:hover{
+  background:#222a36;
+  border-color:#3a5a8c;
+}
+
+.folder .icon{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.folder .name{
+  font-size:13px;
+  line-height:1.4;
 }
 
 /* FOOTER */
@@ -243,7 +278,6 @@ ARKHIV-X | Interno
 
 <div class="user-box">
 
-<!-- COLOQUE A FOTO AQUI -->
 <img src="alek.jpg" alt="Aleksei">
 
 <div class="user-info">
@@ -278,7 +312,7 @@ Status: <span class="status-active">Ativo</span>
 
 <div class="card">
 <h2>Arquivos Privados</h2>
-<p>14</p>
+<p>5</p>
 </div>
 
 <div class="card">
@@ -288,7 +322,7 @@ Status: <span class="status-active">Ativo</span>
 
 </div>
 
-<!-- TABLE -->
+<!-- ATIVIDADES -->
 
 <div class="table-box">
 
@@ -324,14 +358,44 @@ Status: <span class="status-active">Ativo</span>
 <td class="status-active">Concluído</td>
 </tr>
 
-<tr>
-<td>22/01/2026</td>
-<td>Revisão</td>
-<td>Relatório 024-B</td>
-<td class="status-active">Concluído</td>
-</tr>
-
 </table>
+
+</div>
+
+<!-- ARQUIVOS PESSOAIS -->
+
+<div class="table-box">
+
+<h2>Arquivos Pessoais — Acesso Restrito</h2>
+
+<div class="folder-grid">
+
+<a href="arquivo/log-0217.html" class="folder">
+  <div class="icon">📁</div>
+  <div class="name">Registro 02:17</div>
+</a>
+
+<a href="arquivo/audio-helena-transcricao.html" class="folder">
+  <div class="icon">📁</div>
+  <div class="name">Ocorrência 14-C</div>
+</a>
+
+<a href="arquivo/caso-vertice.html" class="folder">
+  <div class="icon">📁</div>
+  <div class="name">Operação Vértice</div>
+</a>
+
+<a href="arquivo/arquivo-h2019.html" class="folder">
+  <div class="icon">📁</div>
+  <div class="name">Helena (H-2019)</div>
+</a>
+
+<a href="arquivo/relatorio-miya.html" class="folder">
+  <div class="icon">📁</div>
+  <div class="name">Miya — Relatório</div>
+</a>
+
+</div>
 
 </div>
 
