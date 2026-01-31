@@ -15,8 +15,6 @@
   --text-muted: #9aa3ad;
   --accent: #3a5a8c;
   --green: #6fa36f;
-  --yellow: #c8b45b;
-  --red: #b25b5b;
 }
 
 * {
@@ -55,7 +53,7 @@ header a {
 
 .main h1 {
   font-size: 28px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .subtitle {
@@ -74,9 +72,6 @@ header a {
 .case {
   padding: 18px 22px;
   border-bottom: 1px solid #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   transition: background 0.2s;
 }
 
@@ -86,6 +81,14 @@ header a {
 
 .case:hover {
   background: #171c24;
+}
+
+.case a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* INFO */
@@ -106,37 +109,9 @@ header a {
   font-size: 12px;
   padding: 5px 10px;
   border-radius: 3px;
-  letter-spacing: 0.5px;
-}
-
-.open {
-  background: rgba(200,180,91,0.15);
-  color: var(--yellow);
-}
-
-.closed {
+  letter-spacing: 0.4px;
   background: rgba(111,163,111,0.15);
   color: var(--green);
-}
-
-.archived {
-  background: rgba(178,91,91,0.15);
-  color: var(--red);
-}
-
-/* LINK */
-
-.case a {
-  color: inherit;
-  text-decoration: none;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.case a:hover {
-  text-decoration: none;
 }
 
 /* FOOTER */
@@ -167,76 +142,160 @@ Sistema oficial de consulta — acesso público monitorado
 
 <div class="case-list">
 
-<!-- CASO 041 -->
+<!-- 041 -->
 
 <div class="case">
-
 <a href="caso-041.html">
-
 <div class="case-info">
-
 <h2>041-B — Distrito Industrial</h2>
-
-<p>
-Homicídio | Última atualização: 18/01/2026
-</p>
-
+<p>Homicídio | Atualizado: 18/01/2026</p>
 </div>
-
-<div class="status open">
-EM ANDAMENTO
-</div>
-
+<div class="status">ENCERRADO</div>
 </a>
-
 </div>
 
-<!-- CASO 038 -->
+<!-- 038 -->
 
 <div class="case">
-
 <a href="caso-038.html">
-
 <div class="case-info">
-
 <h2>038-A — Residencial Severny</h2>
-
-<p>
-Homicídio múltiplo | Atualizado: 09/12/2025
-</p>
-
+<p>Homicídio múltiplo | 09/12/2025</p>
 </div>
-
-<div class="status closed">
-ENCERRADO
-</div>
-
+<div class="status">ENCERRADO</div>
 </a>
-
 </div>
 
-<!-- CASO 029 -->
+<!-- 029 -->
 
 <div class="case">
-
 <a href="caso-029.html">
-
 <div class="case-info">
-
 <h2>029-C — Distrito Portuário</h2>
-
-<p>
-Silenciamento corporativo | Atualizado: 03/11/2025
-</p>
-
+<p>Silenciamento corporativo | 03/11/2025</p>
 </div>
-
-<div class="status closed">
-ENCERRADO
-</div>
-
+<div class="status">ENCERRADO</div>
 </a>
+</div>
 
+<!-- 026 -->
+
+<div class="case">
+<a href="caso-026.html">
+<div class="case-info">
+<h2>026-A — Bairro Kirovsky</h2>
+<p>Homicídio doméstico | 22/05/2024</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 024 -->
+
+<div class="case">
+<a href="caso-024.html">
+<div class="case-info">
+<h2>024-B — Distrito Acadêmico</h2>
+<p>Extorsão e homicídio | 11/02/2024</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 021 -->
+
+<div class="case">
+<a href="caso-021.html">
+<div class="case-info">
+<h2>021-C — Bairro Volnaya</h2>
+<p>Violência doméstica | 29/10/2023</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 019 -->
+
+<div class="case">
+<a href="caso-019.html">
+<div class="case-info">
+<h2>019-D — Conj. Novaya</h2>
+<p>Negligência coletiva | 17/06/2023</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 017 -->
+
+<div class="case">
+<a href="caso-017.html">
+<div class="case-info">
+<h2>017-B — Centro Volga</h2>
+<p>Crime financeiro | 03/02/2023</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 015 -->
+
+<div class="case">
+<a href="caso-015.html">
+<div class="case-info">
+<h2>015-A — Zona Industrial</h2>
+<p>Conflito por drogas | 14/09/2022</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 014 -->
+
+<div class="case">
+<a href="caso-014.html">
+<div class="case-info">
+<h2>014-K — Distrito Zarya</h2>
+<p>Abuso psicológico | 08/04/2022</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 012 -->
+
+<div class="case">
+<a href="caso-012.html">
+<div class="case-info">
+<h2>012-F — Hospital Central</h2>
+<p>Erro médico | 21/11/2021</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 010 -->
+
+<div class="case">
+<a href="caso-010.html">
+<div class="case-info">
+<h2>010-M — Distrito Nevsky</h2>
+<p>Perseguição obsessiva | 05/07/2021</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
+</div>
+
+<!-- 009 -->
+
+<div class="case">
+<a href="caso-009.html">
+<div class="case-info">
+<h2>009-R — Rodovia M-17</h2>
+<p>Homicídio culposo | 14/03/2021</p>
+</div>
+<div class="status">ENCERRADO</div>
+</a>
 </div>
 
 </div>
