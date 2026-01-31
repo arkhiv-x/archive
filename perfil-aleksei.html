@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Perfil Funcional | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+  --green:#6fbf73;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+  background:var(--bg-dark);
+  padding:18px 25px;
+  border-bottom:1px solid #222;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  font-size:17px;
+  font-weight:500;
+}
+
+header a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:13px;
+}
+
+/* MAIN */
+
+.main{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 25px;
+}
+
+/* PROFILE CARD */
+
+.profile{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  display:flex;
+  gap:30px;
+  padding:30px;
+  margin-bottom:35px;
+}
+
+/* FOTO */
+
+.photo{
+  width:170px;
+  min-width:170px;
+  text-align:center;
+}
+
+.photo img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border:1px solid #222;
+}
+
+.photo p{
+  margin-top:6px;
+  font-size:11px;
+  color:var(--text-muted);
+}
+
+/* INFO */
+
+.info{
+  flex:1;
+}
+
+.info h2{
+  font-size:22px;
+  margin-bottom:5px;
+}
+
+.info .id{
+  font-size:13px;
+  color:var(--text-muted);
+  margin-bottom:18px;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px 30px;
+  font-size:14px;
+}
+
+.label{
+  color:var(--text-muted);
+}
+
+.value{
+  color:#ddd;
+}
+
+/* SECTIONS */
+
+.section{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  padding:25px;
+  margin-bottom:25px;
+}
+
+.section h3{
+  font-size:15px;
+  margin-bottom:12px;
+  color:var(--accent);
+}
+
+.section p{
+  font-size:14px;
+  line-height:1.6;
+  color:#ddd;
+}
+
+.status{
+  color:var(--green);
+  font-weight:500;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--text-muted);
+  margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>ARKHIV-X | Perfil Funcional</h1>
+
+<a href="painel-aleksei.html">← Voltar ao Painel</a>
+
+</header>
+
+<div class="main">
+
+<!-- PERFIL -->
+
+<div class="profile">
+
+<div class="photo">
+
+<img src="alek.jpg" alt="Aleksei">
+
+<p>Registro Institucional</p>
+
+</div>
+
+<div class="info">
+
+<h2>Aleksei Pavlovich Dmitriev</h2>
+
+<div class="id">
+ID Funcional: 94721-03 | Situação: <span class="status">Ativo</span>
+</div>
+
+<div class="grid">
+
+<div>
+<span class="label">Nascimento:</span><br>
+<span class="value">12/09/1982</span>
+</div>
+
+<div>
+<span class="label">Idade:</span><br>
+<span class="value">43 anos</span>
+</div>
+
+<div>
+<span class="label">Ingresso:</span><br>
+<span class="value">2014</span>
+</div>
+
+<div>
+<span class="label">Lotação:</span><br>
+<span class="value">Perícia Comportamental</span>
+</div>
+
+<div>
+<span class="label">Cargo:</span><br>
+<span class="value">Analista de Perfil Criminal</span>
+</div>
+
+<div>
+<span class="label">Formação:</span><br>
+<span class="value">Psicologia Forense / Criminologia</span>
+</div>
+
+<div>
+<span class="label">Estado Civil:</span><br>
+<span class="value">Viúvo</span>
+</div>
+
+<div>
+<span class="label">Dependentes:</span><br>
+<span class="value">1</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HISTÓRICO -->
+
+<div class="section">
+
+<h3>Histórico Funcional</h3>
+
+<p>
+Servidor admitido em 2014, com atuação prioritária
+em análise comportamental, reconstrução de perfil
+criminal e avaliação de risco.
+</p>
+
+<p>
+Participação em operações de alta complexidade,
+com desempenho acima da média institucional.
+</p>
+
+</div>
+
+<!-- QUALIFICAÇÕES -->
+
+<div class="section">
+
+<h3>Qualificações</h3>
+
+<p>
+• Psicologia Forense Avançada<br>
+• Criminologia Aplicada<br>
+• Análise de Padrões Comportamentais<br>
+• Mediação de Crise<br>
+• Interrogatório Técnico
+</p>
+
+</div>
+
+<!-- OBSERVAÇÕES -->
+
+<div class="section">
+
+<h3>Observações Administrativas</h3>
+
+<p>
+Servidor mantém postura profissional adequada,
+cumpre prazos e protocolos.
+</p>
+
+<p>
+Apresenta perfil reservado, com baixa exposição pessoal
+no ambiente institucional.
+</p>
+
+<p>
+Registra alto índice de autossuficiência operacional.
+</p>
+
+</div>
+
+<footer>
+
+ARKHIV-X — Cadastro Interno
+
+</footer>
+
+</div>
+
+</body>
+</html>
