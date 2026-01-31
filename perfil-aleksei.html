@@ -41,7 +41,7 @@ header{
 }
 
 header h1{
-  font-size:17px;
+  font-size:16px;
   font-weight:500;
 }
 
@@ -56,7 +56,7 @@ header a{
 .main{
   max-width:1000px;
   margin:auto;
-  padding:40px 25px;
+  padding:35px 20px;
 }
 
 /* PROFILE CARD */
@@ -65,22 +65,23 @@ header a{
   background:var(--bg-panel);
   border:1px solid #222;
   display:flex;
-  gap:30px;
-  padding:30px;
-  margin-bottom:35px;
+  gap:35px;
+  padding:28px;
+  margin-bottom:30px;
+  align-items:flex-start;
 }
 
 /* FOTO */
 
 .photo{
-  width:170px;
-  min-width:170px;
+  width:180px;
+  min-width:180px;
   text-align:center;
 }
 
 .photo img{
   width:100%;
-  height:230px;
+  height:240px;
   object-fit:cover;
   border:1px solid #222;
 }
@@ -99,13 +100,18 @@ header a{
 
 .info h2{
   font-size:22px;
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
-.info .id{
+.id{
   font-size:13px;
   color:var(--text-muted);
   margin-bottom:18px;
+}
+
+.status{
+  color:var(--green);
+  font-weight:500;
 }
 
 /* GRID */
@@ -113,12 +119,17 @@ header a{
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:18px 30px;
+  gap:14px 25px;
   font-size:14px;
+}
+
+.item{
+  line-height:1.4;
 }
 
 .label{
   color:var(--text-muted);
+  font-size:12px;
 }
 
 .value{
@@ -130,13 +141,13 @@ header a{
 .section{
   background:var(--bg-panel);
   border:1px solid #222;
-  padding:25px;
-  margin-bottom:25px;
+  padding:22px;
+  margin-bottom:22px;
 }
 
 .section h3{
-  font-size:15px;
-  margin-bottom:12px;
+  font-size:14px;
+  margin-bottom:10px;
   color:var(--accent);
 }
 
@@ -146,18 +157,43 @@ header a{
   color:#ddd;
 }
 
-.status{
-  color:var(--green);
-  font-weight:500;
-}
-
 /* FOOTER */
 
 footer{
   text-align:center;
   font-size:12px;
   color:var(--text-muted);
-  margin-top:40px;
+  margin-top:35px;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+.profile{
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.photo{
+  width:150px;
+}
+
+.photo img{
+  height:200px;
+}
+
+.info{
+  width:100%;
+}
+
+.grid{
+  grid-template-columns:1fr;
+  text-align:left;
+  margin-top:15px;
+}
+
 }
 
 </style>
@@ -192,49 +228,49 @@ footer{
 <h2>Aleksei Pavlovich Dmitriev</h2>
 
 <div class="id">
-ID Funcional: 94721-03 | Situação: <span class="status">Ativo</span>
+ID: 94721-03 | Situação: <span class="status">Ativo</span>
 </div>
 
 <div class="grid">
 
-<div>
-<span class="label">Nascimento:</span><br>
-<span class="value">12/09/1982</span>
+<div class="item">
+<div class="label">Nascimento</div>
+<div class="value">12/09/1982</div>
 </div>
 
-<div>
-<span class="label">Idade:</span><br>
-<span class="value">43 anos</span>
+<div class="item">
+<div class="label">Idade</div>
+<div class="value">43 anos</div>
 </div>
 
-<div>
-<span class="label">Ingresso:</span><br>
-<span class="value">2014</span>
+<div class="item">
+<div class="label">Ingresso</div>
+<div class="value">2014</div>
 </div>
 
-<div>
-<span class="label">Lotação:</span><br>
-<span class="value">Perícia Comportamental</span>
+<div class="item">
+<div class="label">Lotação</div>
+<div class="value">Perícia Comportamental</div>
 </div>
 
-<div>
-<span class="label">Cargo:</span><br>
-<span class="value">Analista de Perfil Criminal</span>
+<div class="item">
+<div class="label">Cargo</div>
+<div class="value">Analista de Perfil Criminal</div>
 </div>
 
-<div>
-<span class="label">Formação:</span><br>
-<span class="value">Psicologia Forense / Criminologia</span>
+<div class="item">
+<div class="label">Formação</div>
+<div class="value">Psicologia Forense / Criminologia</div>
 </div>
 
-<div>
-<span class="label">Estado Civil:</span><br>
-<span class="value">Viúvo</span>
+<div class="item">
+<div class="label">Estado Civil</div>
+<div class="value">Viúvo</div>
 </div>
 
-<div>
-<span class="label">Dependentes:</span><br>
-<span class="value">1</span>
+<div class="item">
+<div class="label">Dependentes</div>
+<div class="value">1</div>
 </div>
 
 </div>
@@ -290,12 +326,11 @@ cumpre prazos e protocolos.
 </p>
 
 <p>
-Apresenta perfil reservado, com baixa exposição pessoal
-no ambiente institucional.
+Apresenta perfil reservado, com baixa exposição pessoal.
 </p>
 
 <p>
-Registra alto índice de autossuficiência operacional.
+Alto índice de autonomia operacional.
 </p>
 
 </div>
