@@ -72,16 +72,25 @@ font-size:16px;
 border-bottom:1px solid #222;
 }
 
+/* Container para rolagem no mobile */
+.table-container{
+width:100%;
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
+}
+
 table{
 width:100%;
 border-collapse:collapse;
 font-size:13px;
+min-width:650px;
 }
 
 th,td{
 padding:12px 14px;
 border-bottom:1px solid #222;
 text-align:left;
+white-space:nowrap;
 }
 
 th{
@@ -112,6 +121,32 @@ font-size:12px;
 color:var(--text-muted);
 }
 
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+.main{
+padding:20px 12px;
+}
+
+h1{
+font-size:22px;
+}
+
+.subtitle{
+font-size:13px;
+}
+
+table{
+font-size:12px;
+}
+
+th,td{
+padding:8px 6px;
+}
+
+}
+
 </style>
 </head>
 
@@ -132,6 +167,8 @@ Documentos analíticos produzidos pela Perícia Comportamental.
 <div class="table">
 
 <h2>Registros Recentes</h2>
+
+<div class="table-container">
 
 <table>
 
@@ -181,6 +218,8 @@ Documentos analíticos produzidos pela Perícia Comportamental.
 </tr>
 
 </table>
+
+</div>
 
 </div>
 
