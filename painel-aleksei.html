@@ -32,7 +32,6 @@ body{
   color:var(--text-main);
   display:flex;
   min-height:100vh;
-  overflow:hidden;
 }
 
 
@@ -231,10 +230,6 @@ th{
     left:0;
   }
 
-  body{
-    overflow:hidden;
-  }
-
   .main{
     padding:70px 20px 25px;
   }
@@ -392,9 +387,39 @@ ARKHIV-X — Sistema Interno Monitorado
 
 <script>
 
+const sidebar = document.getElementById("sidebar");
+const btn = document.querySelector(".menu-btn");
+
 function toggleMenu(){
-  document.getElementById("sidebar").classList.toggle("active");
+  sidebar.classList.toggle("active");
 }
+
+/* Fecha ao clicar fora */
+
+document.addEventListener("click", function(e){
+
+  if(window.innerWidth <= 900){
+
+    if(
+      !sidebar.contains(e.target) &&
+      !btn.contains(e.target)
+    ){
+      sidebar.classList.remove("active");
+    }
+
+  }
+
+});
+
+/* Fecha ao clicar em link */
+
+document.querySelectorAll(".menu a").forEach(link=>{
+  link.addEventListener("click", ()=>{
+    if(window.innerWidth <= 900){
+      sidebar.classList.remove("active");
+    }
+  });
+});
 
 </script>
 
