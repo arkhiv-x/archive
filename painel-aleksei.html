@@ -32,6 +32,24 @@ body{
   color:var(--text-main);
   display:flex;
   min-height:100vh;
+  overflow:hidden;
+}
+
+
+/* BOTÃO MOBILE */
+
+.menu-btn{
+  display:none;
+  position:fixed;
+  top:15px;
+  left:15px;
+  font-size:22px;
+  background:var(--bg-dark);
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:4px;
+  z-index:1001;
 }
 
 
@@ -43,6 +61,7 @@ body{
   border-right:1px solid #222;
   padding:25px 18px;
   flex-shrink:0;
+  transition:0.3s;
 }
 
 .sidebar h1{
@@ -95,8 +114,8 @@ body{
   justify-content:space-between;
   align-items:center;
   margin-bottom:35px;
-  flex-wrap:wrap;
   gap:15px;
+  flex-wrap:wrap;
 }
 
 .user{
@@ -153,12 +172,11 @@ body{
 }
 
 
-/* TABELAS */
+/* TABELA */
 
 .table{
   background:var(--bg-panel);
   border:1px solid #222;
-  margin-bottom:35px;
 }
 
 .table h2{
@@ -168,7 +186,6 @@ body{
 }
 
 .table-container{
-  width:100%;
   overflow-x:auto;
 }
 
@@ -188,60 +205,38 @@ th,td{
 
 th{
   color:var(--text-muted);
-  font-weight:normal;
 }
 
-.done{
-  color:var(--green);
-}
-
-.pending{
-  color:var(--yellow);
-}
-
-
-/* RODAPÉ */
-
-footer{
-  margin-top:40px;
-  font-size:12px;
-  text-align:center;
-  color:var(--text-muted);
-}
+.done{color:var(--green);}
+.pending{color:var(--yellow);}
 
 
 /* MOBILE */
 
 @media (max-width:900px){
 
-  body{
-    flex-direction:column;
+  .menu-btn{
+    display:block;
   }
 
   .sidebar{
-    width:100%;
-    border-right:none;
-    border-bottom:1px solid #222;
+    position:fixed;
+    left:-240px;
+    top:0;
+    height:100%;
+    z-index:1000;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  body{
+    overflow:hidden;
   }
 
   .main{
-    padding:25px 15px;
-  }
-
-  .grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
-@media (max-width:500px){
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  h2{
-    font-size:18px;
+    padding:70px 20px 25px;
   }
 
 }
@@ -252,9 +247,14 @@ footer{
 <body>
 
 
+<!-- BOTÃO -->
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+
 <!-- SIDEBAR -->
 
-<div class="sidebar">
+<div class="sidebar" id="sidebar">
 
 <h1>ARKHIV-X<br><span>Interno</span></h1>
 
@@ -287,7 +287,7 @@ footer{
 
 <div class="user">
 
-<img src="alek.jpg" alt="Aleksei">
+<img src="alek.jpg">
 
 <div class="user-info">
 
@@ -388,6 +388,16 @@ ARKHIV-X — Sistema Interno Monitorado
 </footer>
 
 </div>
+
+
+<script>
+
+function toggleMenu(){
+  document.getElementById("sidebar").classList.toggle("active");
+}
+
+</script>
+
 
 </body>
 </html>
