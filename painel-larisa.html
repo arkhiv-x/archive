@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Painel Interno | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+  --bg-main:#0f1218;
+  --bg-dark:#12161c;
+  --bg-panel:#1a1f27;
+  --text-main:#e6e6e6;
+  --text-muted:#9aa3ad;
+  --accent:#3a5a8c;
+  --green:#6fbf73;
+  --yellow:#d4b24c;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+  min-height:100vh;
+  display:flex;
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+  width:230px;
+  background:var(--bg-dark);
+  border-right:1px solid #222;
+  padding:25px 18px;
+}
+
+.sidebar h1{
+  font-size:16px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.sidebar span{
+  color:var(--accent);
+}
+
+.menu a{
+  display:block;
+  padding:12px 10px;
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:14px;
+  border-radius:4px;
+  margin-bottom:4px;
+}
+
+.menu a:hover{
+  background:#1e2530;
+  color:#fff;
+}
+
+.logout{
+  margin-top:40px;
+  font-size:13px;
+  color:#c05c5c;
+  text-decoration:none;
+  display:block;
+}
+
+
+/* MAIN */
+
+.main{
+  flex:1;
+  padding:35px 40px;
+  overflow-y:auto;
+}
+
+
+/* TOP */
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:35px;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.user img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid #333;
+}
+
+.user-info{
+  font-size:13px;
+}
+
+.user-info strong{
+  font-size:14px;
+}
+
+.status{
+  color:var(--green);
+}
+
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:40px;
+}
+
+.card{
+  background:var(--bg-panel);
+  border:1px solid #222;
+  padding:20px;
+}
+
+.card h3{
+  font-size:14px;
+  margin-bottom:10px;
+  color:var(--text-muted);
+}
+
+.card p{
+  font-size:28px;
+  font-weight:bold;
+}
+
+
+/* TABLE */
+
+.table{
+  background:var(--bg-panel);
+  border:1px solid #222;
+}
+
+.table h2{
+  padding:18px 20px;
+  font-size:16px;
+  border-bottom:1px solid #222;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th,td{
+  padding:12px 14px;
+  border-bottom:1px solid #222;
+  text-align:left;
+}
+
+th{
+  color:var(--text-muted);
+  font-weight:normal;
+}
+
+.done{
+  color:var(--green);
+}
+
+.pending{
+  color:var(--yellow);
+}
+
+
+/* FOOTER */
+
+footer{
+  margin-top:50px;
+  font-size:12px;
+  text-align:center;
+  color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h1>ARKHIV-X<br><span>Interno</span></h1>
+
+<div class="menu">
+
+<a href="painel-larisa.html">Visão Geral</a>
+<a href="casos-ativos.html">Casos Ativos</a>
+<a href="casos-encerrados.html">Casos Encerrados</a>
+<a href="relatorios.html">Relatórios</a>
+<a href="arquivos-larisa.html">Arquivos</a>
+<a href="perfil-larisa.html">Perfil</a>
+
+</div>
+
+<a class="logout" href="index.html">Encerrar Sessão</a>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+<!-- TOP -->
+
+<div class="top">
+
+<h2>Painel Operacional</h2>
+
+<div class="user">
+
+<img src="larisa.jpg" alt="Larisa">
+
+<div class="user-info">
+
+<strong>Larisa Morozova</strong><br>
+ID: 94812-05<br>
+<span class="status">Ativo</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARDS -->
+
+<div class="grid">
+
+<div class="card">
+<h3>Casos Ativos</h3>
+<p>7</p>
+</div>
+
+<div class="card">
+<h3>Relatórios Pendentes</h3>
+<p>1</p>
+</div>
+
+<div class="card">
+<h3>Arquivos Privados</h3>
+<p>9</p>
+</div>
+
+<div class="card">
+<h3>Acessos Recentes</h3>
+<p>5</p>
+</div>
+
+</div>
+
+
+<!-- TABLE -->
+
+<div class="table">
+
+<h2>Últimas Atividades</h2>
+
+<table>
+
+<tr>
+<th>Data</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>28/01/2026</td>
+<td>Relatório</td>
+<td>Revisão Caso 074-M</td>
+<td class="done">Concluído</td>
+</tr>
+
+<tr>
+<td>26/01/2026</td>
+<td>Análise</td>
+<td>Perfil Suspeito 058-K</td>
+<td class="done">Concluído</td>
+</tr>
+
+<tr>
+<td>24/01/2026</td>
+<td>Acesso</td>
+<td>Arquivos Restritos</td>
+<td class="pending">Pendente</td>
+</tr>
+
+<tr>
+<td>21/01/2026</td>
+<td>Upload</td>
+<td>Material Forense</td>
+<td class="done">Concluído</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<footer>
+
+ARKHIV-X — Sistema Interno Monitorado
+
+</footer>
+
+</div>
+
+</body>
+</html>
