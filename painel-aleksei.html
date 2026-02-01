@@ -5,8 +5,7 @@
 
 <title>Painel Interno | ARKHIV-X</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
@@ -28,16 +27,11 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
   font-family:Arial,sans-serif;
 }
 
-html,body{
-  width:100%;
-  height:100%;
-  overflow:hidden;
-}
-
 body{
   background:var(--bg-main);
   color:var(--text-main);
   display:flex;
+  min-height:100vh;
 }
 
 
@@ -101,6 +95,8 @@ body{
   justify-content:space-between;
   align-items:center;
   margin-bottom:35px;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
 .user{
@@ -171,16 +167,23 @@ body{
   border-bottom:1px solid #222;
 }
 
+.table-container{
+  width:100%;
+  overflow-x:auto;
+}
+
 table{
   width:100%;
   border-collapse:collapse;
   font-size:13px;
+  min-width:600px;
 }
 
 th,td{
   padding:12px 14px;
   border-bottom:1px solid #222;
   text-align:left;
+  white-space:nowrap;
 }
 
 th{
@@ -206,6 +209,43 @@ footer{
   color:var(--text-muted);
 }
 
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+  body{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid #222;
+  }
+
+  .main{
+    padding:25px 15px;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media (max-width:500px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h2{
+    font-size:18px;
+  }
+
+}
+
 </style>
 </head>
 
@@ -222,9 +262,9 @@ footer{
 
 <a href="painel-aleksei.html">Visão Geral</a>
 <a href="casos-ativos.html">Casos Ativos</a>
+<a href="casos-encerrados.html">Casos Encerrados</a>
 <a href="relatorios.html">Relatórios</a>
 <a href="arquivos-aleksei.html">Arquivos</a>
-<a href="#">Análises</a>
 <a href="perfil-aleksei.html">Perfil</a>
 
 </div>
@@ -268,7 +308,7 @@ ID: 94721-03<br>
 
 <div class="card">
 <h3>Casos Ativos</h3>
-<p>1</p>
+<p>7</p>
 </div>
 
 <div class="card">
@@ -294,6 +334,8 @@ ID: 94721-03<br>
 <div class="table">
 
 <h2>Últimas Atividades</h2>
+
+<div class="table-container">
 
 <table>
 
@@ -335,52 +377,6 @@ ID: 94721-03<br>
 </table>
 
 </div>
-
-
-<!-- CASOS ENCERRADOS -->
-
-<div class="table">
-
-<h2>Casos Encerrados</h2>
-
-<table>
-
-<tr>
-<th>Código</th>
-<th>Tipo</th>
-<th>Encerramento</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>014-C</td>
-<td>Crime Organizado</td>
-<td>18/11/2023</td>
-<td class="done">Finalizado</td>
-</tr>
-
-<tr>
-<td>032-H</td>
-<td>Homicídio Familiar</td>
-<td>04/05/2022</td>
-<td class="done">Encerrado</td>
-</tr>
-
-<tr>
-<td>067-I</td>
-<td>Seita Religiosa</td>
-<td>21/09/2021</td>
-<td class="done">Encerrado</td>
-</tr>
-
-<tr>
-<td>091-D</td>
-<td>Fraude Digital</td>
-<td>11/02/2020</td>
-<td class="done">Arquivado</td>
-</tr>
-
-</table>
 
 </div>
 
