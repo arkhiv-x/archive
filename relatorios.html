@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Relatórios | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-dark:#12161c;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+--green:#4fa87a;
+--yellow:#d4b02a;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+header{
+background:var(--bg-dark);
+padding:18px 25px;
+border-bottom:1px solid #222;
+}
+
+header a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:14px;
+}
+
+.main{
+max-width:1000px;
+margin:auto;
+padding:40px 25px;
+}
+
+h1{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:14px;
+color:var(--text-muted);
+margin-bottom:30px;
+}
+
+/* TABLE */
+
+.table{
+background:var(--bg-panel);
+border:1px solid #222;
+}
+
+.table h2{
+padding:18px 20px;
+font-size:16px;
+border-bottom:1px solid #222;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+font-size:13px;
+}
+
+th,td{
+padding:12px 14px;
+border-bottom:1px solid #222;
+text-align:left;
+}
+
+th{
+color:var(--text-muted);
+font-weight:normal;
+}
+
+.status.green{color:var(--green);}
+.status.yellow{color:var(--yellow);}
+
+.btn{
+padding:6px 10px;
+background:var(--accent);
+color:white;
+text-decoration:none;
+font-size:12px;
+border-radius:3px;
+}
+
+.btn:hover{
+opacity:0.85;
+}
+
+footer{
+margin-top:40px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="painel-aleksei.html">← Voltar ao painel</a>
+</header>
+
+<div class="main">
+
+<h1>Relatórios Técnicos</h1>
+
+<p class="subtitle">
+Documentos analíticos produzidos pela Perícia Comportamental.
+</p>
+
+<div class="table">
+
+<h2>Registros Recentes</h2>
+
+<table>
+
+<tr>
+<th>Código</th>
+<th>Título</th>
+<th>Data</th>
+<th>Caso</th>
+<th>Status</th>
+<th></th>
+</tr>
+
+<tr>
+<td>RPT-017</td>
+<td>Avaliação Pós-Operação</td>
+<td>30/01/2026</td>
+<td>052-D</td>
+<td class="status yellow">Em revisão</td>
+<td><a href="rpt-017.html" class="btn">Abrir</a></td>
+</tr>
+
+<tr>
+<td>RPT-021</td>
+<td>Perfil Comportamental</td>
+<td>18/01/2026</td>
+<td>074-M</td>
+<td class="status green">Aprovado</td>
+<td><a href="rpt-021.html" class="btn">Abrir</a></td>
+</tr>
+
+<tr>
+<td>RPT-026</td>
+<td>Risco Institucional</td>
+<td>09/01/2026</td>
+<td>019-A</td>
+<td class="status green">Aprovado</td>
+<td><a href="rpt-026.html" class="btn">Abrir</a></td>
+</tr>
+
+<tr>
+<td>RPT-031</td>
+<td>Análise de Escalada</td>
+<td>22/12/2025</td>
+<td>096-T</td>
+<td class="status green">Aprovado</td>
+<td><a href="rpt-031.html" class="btn">Abrir</a></td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+ARKHIV-X — Documentação Interna
+</footer>
+
+</div>
+
+</body>
+</html>
