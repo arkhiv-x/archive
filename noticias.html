@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Notícias | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+header{
+background:#12161c;
+padding:18px 25px;
+border-bottom:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:18px;
+}
+
+header a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:13px;
+}
+
+.main{
+max-width:1000px;
+margin:auto;
+padding:40px 25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+}
+
+.card{
+background:var(--bg-panel);
+border:1px solid #222;
+padding:20px;
+transition:.2s;
+}
+
+.card:hover{
+border-color:var(--accent);
+transform:translateY(-2px);
+}
+
+.card a{
+color:inherit;
+text-decoration:none;
+display:block;
+}
+
+.tag{
+font-size:11px;
+color:var(--accent);
+margin-bottom:6px;
+}
+
+.title{
+font-size:15px;
+margin-bottom:8px;
+}
+
+.desc{
+font-size:13px;
+color:var(--text-muted);
+line-height:1.4;
+}
+
+.date{
+margin-top:10px;
+font-size:11px;
+color:#777;
+}
+
+footer{
+margin-top:50px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ARKHIV-X | Central de Informações</h1>
+<a href="index.html">← Voltar</a>
+</header>
+
+<div class="main">
+
+<div class="grid">
+
+<!-- CASO 041-B -->
+
+<div class="card">
+<a href="noticia-041b.html">
+
+<div class="tag">Caso em Andamento</div>
+
+<div class="title">CASO 041-B — Distrito Industrial</div>
+
+<div class="desc">
+Investigação sobre a morte de Irina Volkova segue sob análise.
+Novos dados indicam motivação interna.
+</div>
+
+<div class="date">17/11/2025</div>
+
+</a>
+</div>
+
+<!-- COMUNICADO -->
+
+<div class="card">
+<a href="comunicado-01.html">
+
+<div class="tag">Comunicado Oficial</div>
+
+<div class="title">Nota à Imprensa — Setor Norte</div>
+
+<div class="desc">
+ARKHIV-X reforça compromisso com transparência
+durante apuração em andamento.
+</div>
+
+<div class="date">20/11/2025</div>
+
+</a>
+</div>
+
+</div>
+
+<footer>
+
+ARKHIV-X — Central Pública de Comunicação
+
+</footer>
+
+</div>
+
+</body>
+</html>
