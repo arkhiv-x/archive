@@ -31,12 +31,13 @@ color:var(--text-main);
 /* HEADER */
 
 header{
-background:#b31212;
+background:var(--bg-dark);
 color:white;
 padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+border-bottom:1px solid #222;
 }
 
 header h1{
@@ -125,6 +126,13 @@ color:var(--accent);
 text-decoration:none;
 }
 
+mark{
+background:#3a5a8c;
+color:white;
+padding:2px 4px;
+border-radius:2px;
+}
+
 </style>
 </head>
 
@@ -134,7 +142,7 @@ text-decoration:none;
 
 <h1>ARKHIV-X Notícias</h1>
 
-<input type="text" class="search" placeholder="Buscar...">
+<input type="text" class="search" id="searchInput" placeholder="Buscar...">
 
 </header>
 
@@ -156,7 +164,7 @@ Por Redação ARKHIV-X — 17/11/2025 · 22h48
 
 <div class="image"></div>
 
-<div class="article">
+<div class="article" id="article">
 
 <p>
 Uma mulher de 32 anos foi encontrada morta na noite desta segunda-feira
@@ -213,6 +221,34 @@ ARKHIV-X — Central Pública de Comunicação
 </footer>
 
 </div>
+
+
+<script>
+
+const input = document.getElementById("searchInput");
+const article = document.getElementById("article");
+let originalContent = article.innerHTML;
+
+input.addEventListener("keyup", function(e){
+
+  if(e.key === "Enter"){
+
+    article.innerHTML = originalContent;
+
+    const text = input.value.trim();
+
+    if(!text) return;
+
+    const regex = new RegExp(text, "gi");
+
+    article.innerHTML = article.innerHTML.replace(regex, match=>{
+      return `<mark>${match}</mark>`;
+    });
+
+  }
+
+});
+</script>
 
 </body>
 </html>
