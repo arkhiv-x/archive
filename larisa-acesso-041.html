@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Acesso Restrito | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+--alert:#c85b5b;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* PANEL */
+
+.panel{
+background:var(--bg-panel);
+border:1px solid #222;
+padding:35px 30px;
+width:100%;
+max-width:380px;
+text-align:center;
+border-radius:6px;
+}
+
+h1{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.sub{
+font-size:13px;
+color:var(--text-muted);
+margin-bottom:25px;
+line-height:1.5;
+}
+
+/* INPUT */
+
+.hint{
+font-size:12px;
+color:#777;
+margin-bottom:8px;
+}
+
+input{
+background:#0f1218;
+border:1px solid #333;
+color:white;
+padding:10px;
+font-size:18px;
+width:180px;
+text-align:center;
+letter-spacing:3px;
+margin-bottom:12px;
+border-radius:4px;
+}
+
+input:focus{
+outline:none;
+border-color:var(--accent);
+}
+
+/* BUTTON */
+
+button{
+background:var(--accent);
+border:none;
+color:white;
+padding:9px 22px;
+cursor:pointer;
+border-radius:4px;
+font-size:14px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+/* ERROR */
+
+#error{
+color:var(--alert);
+font-size:12px;
+margin-top:10px;
+min-height:14px;
+}
+
+/* FOOTER */
+
+.foot{
+margin-top:25px;
+font-size:11px;
+color:#666;
+line-height:1.4;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+<h1>Arquivo Classificado</h1>
+
+<p class="sub">
+Sistema Interno de Documentação Pericial<br>
+Nível de Acesso: Restrito
+</p>
+
+<p class="hint">Formato: __/__/____</p>
+
+<input
+type="text"
+id="pass"
+maxlength="8"
+placeholder="__/__/____"
+>
+
+<br>
+
+<button onclick="check()">Validar Acesso</button>
+
+<p id="error"></p>
+
+<div class="foot">
+Acesso monitorado · Protocolo Interno ARK-17
+</div>
+
+</div>
+
+<script>
+
+function check(){
+
+let value = document
+.getElementById("pass")
+.value
+.replace(/\D/g,"");
+
+if(value === "17112025"){
+window.location.href = "caso041-fragmentos.html";
+}else{
+document.getElementById("error")
+.innerText = "Credencial inválida.";
+}
+
+}
+
+</script>
+
+</body>
+</html>
