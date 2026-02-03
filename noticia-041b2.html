@@ -45,13 +45,30 @@ font-size:20px;
 letter-spacing:1px;
 }
 
+/* SEARCH */
+
+.search-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.search-btn{
+background:none;
+border:none;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
 .search{
+display:none;
 background:white;
 border:none;
 padding:6px 10px;
 border-radius:4px;
 font-size:13px;
-width:140px;
+width:150px;
 }
 
 /* MAIN */
@@ -142,7 +159,13 @@ border-radius:2px;
 
 <h1>ARKHIV-X Notícias</h1>
 
-<input type="text" class="search" id="searchInput" placeholder="Buscar...">
+<div class="search-area">
+
+<button class="search-btn" id="searchBtn">🔍</button>
+
+<input type="text" class="search" id="searchInput" placeholder="Pesquisar...">
+
+</div>
 
 </header>
 
@@ -225,9 +248,28 @@ ARKHIV-X — Central Pública de Comunicação
 
 <script>
 
+const searchBtn = document.getElementById("searchBtn");
 const input = document.getElementById("searchInput");
 const article = document.getElementById("article");
+
 let originalContent = article.innerHTML;
+
+
+/* Abrir busca */
+
+searchBtn.addEventListener("click", ()=>{
+
+  if(input.style.display === "block"){
+    input.style.display = "none";
+  }else{
+    input.style.display = "block";
+    input.focus();
+  }
+
+});
+
+
+/* Buscar */
 
 input.addEventListener("keyup", function(e){
 
@@ -245,9 +287,19 @@ input.addEventListener("keyup", function(e){
       return `<mark>${match}</mark>`;
     });
 
+    const first = document.querySelector("mark");
+
+    if(first){
+      first.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+    }
+
   }
 
 });
+
 </script>
 
 </body>
