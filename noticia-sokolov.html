@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Empresário Viktor Sokolov lidera inovação em segurança | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-dark:#12161c;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+background:var(--bg-dark);
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #222;
+}
+
+header h1{
+font-size:20px;
+letter-spacing:1px;
+}
+
+.search-btn{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+.search-box{
+display:none;
+margin-left:10px;
+}
+
+.search-box input{
+padding:6px 10px;
+border-radius:4px;
+border:none;
+font-size:13px;
+}
+
+/* MAIN */
+
+.main{
+max-width:800px;
+margin:auto;
+padding:30px 20px 50px;
+}
+
+/* TITLE */
+
+.title{
+font-size:26px;
+margin-bottom:10px;
+line-height:1.3;
+}
+
+.subtitle{
+font-size:16px;
+color:#ccc;
+margin-bottom:18px;
+line-height:1.5;
+}
+
+/* META */
+
+.meta{
+font-size:12px;
+color:var(--text-muted);
+margin-bottom:20px;
+}
+
+/* IMAGE */
+
+.image{
+width:100%;
+height:260px;
+background:url(sokolov.jpg) center/cover no-repeat;
+border-radius:4px;
+margin-bottom:25px;
+}
+
+/* TEXT */
+
+.article p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:16px;
+color:#ddd;
+}
+
+.highlight{
+background:#1a1f27;
+border-left:3px solid var(--accent);
+padding:12px;
+font-style:italic;
+margin:20px 0;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:50px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>ARKHIV-X Notícias</h1>
+
+<div>
+<button class="search-btn" onclick="toggleSearch()">⌕</button>
+<span class="search-box" id="searchBox">
+<input type="text" placeholder="Buscar..." onkeyup="searchText(this.value)">
+</span>
+</div>
+
+</header>
+
+<div class="main">
+
+<h2 class="title">
+Empresário Viktor Sokolov lidera avanços em tecnologia de segurança e infraestrutura inteligente
+</h2>
+
+<p class="subtitle">
+Fundador de grupos estratégicos internacionais, executivo se consolida como uma das principais referências em inovação aplicada à segurança urbana e análise de dados.
+</p>
+
+<div class="meta">
+Por Redação ARKHIV-X — 03/03/2025 · 10h12
+</div>
+
+<div class="image"></div>
+
+<div class="article" id="articleContent">
+
+<p>
+O empresário e investidor Viktor Mikhailovich Sokolov tem se destacado nos últimos anos como uma figura central no desenvolvimento de soluções tecnológicas voltadas à segurança institucional e infraestrutura urbana inteligente. À frente de grupos como a Vektor Dynamics e a Vektor Strategic Systems, o executivo lidera projetos que integram análise de dados, monitoramento digital e otimização de recursos operacionais.
+</p>
+
+<p>
+Com atuação internacional, as empresas do grupo participam de contratos estratégicos envolvendo modernização de sistemas de vigilância, inteligência preditiva e consultoria em segurança para organizações públicas e privadas. Especialistas apontam que a abordagem de Sokolov combina inovação tecnológica com planejamento estrutural de longo prazo, característica que tem atraído investimentos e parcerias governamentais.
+</p>
+
+<div class="highlight">
+“A segurança moderna depende da capacidade de antecipar riscos antes que eles se tornem eventos.”  
+— Viktor Sokolov
+</div>
+
+<p>
+Nos últimos meses, a Vektor Strategic Systems anunciou novos acordos voltados à modernização de centros urbanos, incluindo integração de sensores inteligentes, plataformas de análise comportamental e sistemas de resposta rápida para emergências. Segundo representantes da empresa, os projetos têm como objetivo aumentar a eficiência operacional e reduzir vulnerabilidades em ambientes complexos.
+</p>
+
+<p>
+Além das iniciativas corporativas, Sokolov mantém participação ativa em fóruns internacionais sobre segurança tecnológica e governança digital, sendo frequentemente convidado para palestras e conferências especializadas. Analistas de mercado consideram que sua influência no setor tende a crescer, especialmente diante do aumento da demanda global por soluções de proteção e monitoramento inteligente.
+</p>
+
+<p>
+Com novas parcerias previstas para os próximos anos, o empresário consolida sua posição como um dos nomes mais relevantes na convergência entre tecnologia, infraestrutura e segurança estratégica.
+</p>
+
+</div>
+
+<footer>
+
+<a href="noticias.html">← Voltar às notícias</a><br><br>
+
+ARKHIV-X — Central Pública de Comunicação
+
+</footer>
+
+</div>
+
+<script>
+
+function toggleSearch(){
+  const box = document.getElementById("searchBox");
+  box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
+}
+
+function searchText(text){
+  const content = document.getElementById("articleContent");
+  const innerHTML = content.innerHTML;
+  const index = innerHTML.toLowerCase().indexOf(text.toLowerCase());
+  
+  if(index >= 0){
+    const element = content;
+    window.scrollTo({
+      top: element.offsetTop + index * 0.2,
+      behavior: "smooth"
+    });
+  }
+}
+
+</script>
+
+</body>
+</html>
