@@ -2,64 +2,241 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Nikolai Arseniev</title>
+<title>Nikolai Arseniev | ARKHIV-X Notícias</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Arial;background:#0f1218;color:#e6e6e6;}
-header{background:#12161c;padding:18px 25px;border-bottom:1px solid #222;}
-.main{max-width:800px;margin:auto;padding:40px 25px;}
+
+:root{
+--bg-main:#0f1218;
+--bg-dark:#12161c;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+background:var(--bg-dark);
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:18px;
+}
+
+.search-box{
+display:none;
+margin-left:10px;
+}
+
+.search-box input{
+padding:6px 10px;
+border-radius:4px;
+border:none;
+font-size:13px;
+}
+
+.search-btn{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+/* MAIN */
+
+.main{
+max-width:800px;
+margin:auto;
+padding:30px 20px 50px;
+}
+
+.title{
+font-size:26px;
+margin-bottom:10px;
+line-height:1.3;
+}
+
+.subtitle{
+font-size:16px;
+color:#ccc;
+margin-bottom:18px;
+line-height:1.5;
+}
+
+.meta{
+font-size:12px;
+color:var(--text-muted);
+margin-bottom:20px;
+}
 
 .image{
 width:100%;
 height:260px;
-background:url(magnata-arseniev.jpg) center/cover no-repeat;
-border-radius:6px;
-margin-bottom:20px;
+background:url(arseniev.jpg) center/cover no-repeat;
+border-radius:4px;
+margin-bottom:25px;
 }
 
-.meta{font-size:12px;color:#9aa3ad;margin-bottom:20px;}
-p{line-height:1.7;color:#ddd;margin-bottom:16px;}
+.article p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:16px;
+color:#ddd;
+}
+
+.highlight{
+background:#1a1f27;
+border-left:3px solid var(--accent);
+padding:12px;
+font-style:italic;
+margin:20px 0;
+}
+
+footer{
+margin-top:50px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+}
+
+mark{
+background:#3a5a8c;
+color:white;
+padding:2px 4px;
+border-radius:3px;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>ARKHIV-X Comunicação</header>
+<header>
+
+<h1>ARKHIV-X Notícias</h1>
+
+<div>
+<button class="search-btn" onclick="toggleSearch()">⌕</button>
+<span class="search-box" id="searchBox">
+<input type="text" id="searchInput" placeholder="Buscar..." onkeyup="searchText()">
+</span>
+</div>
+
+</header>
 
 <div class="main">
 
-<h1>Empresário Nikolai Arseniev amplia influência no setor tecnológico</h1>
+<h2 class="title">
+Empresário Nikolai Arseniev amplia influência internacional
+com projetos tecnológicos estratégicos
+</h2>
 
-<div class="meta">Publicado em 03/03/2025</div>
+<p class="subtitle">
+Executivo consolida presença global por meio de investimentos em segurança,
+logística e inteligência aplicada a infraestrutura crítica.
+</p>
+
+<div class="meta">
+Por Redação ARKHIV-X — 03/03/2025 · 10h12
+</div>
 
 <div class="image"></div>
 
+<div class="article" id="article">
+
 <p>
-O empresário Nikolai Arseniev anunciou novos investimentos estratégicos
-voltados ao desenvolvimento de sistemas de segurança e monitoramento
-industrial.
+O empresário <mark>Nikolai Arseniev</mark>, fundador do grupo tecnológico
+Arseniev Dynamics, anunciou nesta semana a expansão de operações
+internacionais voltadas ao desenvolvimento de soluções de segurança
+e monitoramento inteligente para ambientes urbanos e industriais.
 </p>
 
 <p>
-Fundador de um conglomerado tecnológico com operações internacionais,
-Arseniev é considerado uma das figuras mais influentes do setor privado,
-mantendo relações com governos e grandes grupos econômicos.
+Reconhecido por sua atuação no setor de inovação aplicada,
+Arseniev tem consolidado parcerias com empresas de infraestrutura
+e governos regionais, ampliando contratos relacionados a
+sistemas de vigilância avançada, análise de dados em tempo real
+e automação logística.
 </p>
 
 <p>
-Analistas apontam que sua atuação crescente em projetos de infraestrutura
-crítica reforça sua posição como um dos principais nomes do mercado
-corporativo regional.
+Fontes do mercado apontam que o crescimento acelerado da companhia
+tem sido impulsionado por investimentos privados significativos,
+além de contratos estratégicos com organizações internacionais.
+</p>
+
+<div class="highlight">
+“A integração entre tecnologia e segurança estrutural é
+o principal vetor de crescimento do setor nos próximos anos.”
+</div>
+
+<p>
+Apesar da expansão, analistas observam que a atuação do grupo
+também desperta interesse de órgãos reguladores devido ao alcance
+de suas operações e à complexidade dos contratos estabelecidos
+em diferentes países.
 </p>
 
 <p>
-Apesar da reputação pública consolidada, especialistas observam que a rápida
-expansão do grupo levanta questionamentos sobre a origem de parte dos
-investimentos recentes.
+A empresa não comentou detalhes específicos sobre novos acordos,
+limitando-se a confirmar que projetos adicionais serão anunciados
+ao longo do segundo semestre.
 </p>
 
 </div>
+
+<footer>
+
+<a href="noticias.html">← Voltar às notícias</a><br><br>
+
+ARKHIV-X — Central Pública de Comunicação
+
+</footer>
+
+</div>
+
+<script>
+
+function toggleSearch(){
+const box = document.getElementById("searchBox");
+box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
+}
+
+function searchText(){
+let input = document.getElementById("searchInput").value.toLowerCase();
+let content = document.getElementById("article");
+let text = content.innerText.toLowerCase();
+
+if(text.includes(input) && input.length > 0){
+content.scrollIntoView({behavior:"smooth"});
+}
+}
+
+</script>
 
 </body>
 </html>
