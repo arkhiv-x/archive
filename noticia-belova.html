@@ -2,63 +2,242 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Irina Belova</title>
+<title>Irina Belova | ARKHIV-X Notícias</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Arial;background:#0f1218;color:#e6e6e6;}
-header{background:#12161c;padding:18px 25px;border-bottom:1px solid #222;}
-.main{max-width:800px;margin:auto;padding:40px 25px;}
+
+:root{
+--bg-main:#0f1218;
+--bg-dark:#12161c;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+background:var(--bg-dark);
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:18px;
+}
+
+.search-box{
+display:none;
+margin-left:10px;
+}
+
+.search-box input{
+padding:6px 10px;
+border-radius:4px;
+border:none;
+font-size:13px;
+}
+
+.search-btn{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+/* MAIN */
+
+.main{
+max-width:800px;
+margin:auto;
+padding:30px 20px 50px;
+}
+
+.title{
+font-size:26px;
+margin-bottom:10px;
+line-height:1.3;
+}
+
+.subtitle{
+font-size:16px;
+color:#ccc;
+margin-bottom:18px;
+line-height:1.5;
+}
+
+.meta{
+font-size:12px;
+color:var(--text-muted);
+margin-bottom:20px;
+}
 
 .image{
 width:100%;
 height:260px;
-background:url(empresaria-belova.jpg) center/cover no-repeat;
-border-radius:6px;
-margin-bottom:20px;
+background:url(belova.jpg) center/cover no-repeat;
+border-radius:4px;
+margin-bottom:25px;
 }
 
-.meta{font-size:12px;color:#9aa3ad;margin-bottom:20px;}
-p{line-height:1.7;color:#ddd;margin-bottom:16px;}
+.article p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:16px;
+color:#ddd;
+}
+
+.highlight{
+background:#1a1f27;
+border-left:3px solid var(--accent);
+padding:12px;
+font-style:italic;
+margin:20px 0;
+}
+
+footer{
+margin-top:50px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+}
+
+mark{
+background:#3a5a8c;
+color:white;
+padding:2px 4px;
+border-radius:3px;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>ARKHIV-X Comunicação</header>
+<header>
+
+<h1>ARKHIV-X Notícias</h1>
+
+<div>
+<button class="search-btn" onclick="toggleSearch()">⌕</button>
+<span class="search-box" id="searchBox">
+<input type="text" id="searchInput" placeholder="Buscar..." onkeyup="searchText()">
+</span>
+</div>
+
+</header>
 
 <div class="main">
 
-<h1>Executiva Irina Belova lidera expansão imobiliária internacional</h1>
+<h2 class="title">
+Irina Belova lidera expansão imobiliária internacional
+e consolida influência econômica
+</h2>
 
-<div class="meta">Publicado em 10/03/2025</div>
+<p class="subtitle">
+Executiva amplia portfólio de investimentos urbanos com projetos
+de alto padrão e parcerias financeiras globais.
+</p>
+
+<div class="meta">
+Por Redação ARKHIV-X — 10/03/2025 · 09h04
+</div>
 
 <div class="image"></div>
 
+<div class="article" id="article">
+
 <p>
-A empresária Irina Belova anunciou novos projetos imobiliários voltados ao
-desenvolvimento urbano sustentável em diferentes regiões estratégicas.
+A empresária <mark>Irina Belova</mark>, presidente do grupo Belova Holdings,
+anunciou novos investimentos no setor imobiliário internacional,
+consolidando sua posição entre os nomes mais influentes
+do mercado econômico regional.
 </p>
 
 <p>
-Conhecida por sua habilidade em negociações de grande escala, Belova mantém
-parcerias com investidores estrangeiros e instituições financeiras,
-consolidando sua influência no setor econômico.
+Com atuação em projetos residenciais de alto padrão e
+complexos corporativos, Belova tem ampliado sua presença
+em diferentes países por meio de fundos privados
+e parcerias estratégicas com instituições financeiras.
 </p>
 
 <p>
-Especialistas destacam que sua trajetória empresarial apresenta crescimento
-acelerado nos últimos anos, acompanhada por aquisições de alto valor e
-operações internacionais complexas.
+Especialistas apontam que a executiva construiu sua reputação
+a partir de operações de alto risco financeiro,
+associadas à reestruturação de ativos imobiliários
+e à aquisição de empreendimentos em mercados emergentes.
+</p>
+
+<div class="highlight">
+“O setor imobiliário continua sendo uma das bases mais
+sólidas de geração de capital em cenários econômicos instáveis.”
+</div>
+
+<p>
+Nos bastidores, analistas observam que a influência
+de Belova se estende além do setor empresarial,
+alcançando ambientes políticos e institucionais,
+o que fortalece sua capacidade de negociação
+em projetos de grande escala.
 </p>
 
 <p>
-Fontes de mercado indicam que a executiva possui conexões relevantes em
-diversos setores industriais, ampliando sua capacidade de atuação em projetos
-de grande impacto econômico.
+A empresária não comentou especulações sobre futuras aquisições,
+limitando-se a afirmar que novos anúncios serão realizados
+nos próximos meses.
 </p>
 
 </div>
+
+<footer>
+
+<a href="noticias.html">← Voltar às notícias</a><br><br>
+
+ARKHIV-X — Central Pública de Comunicação
+
+</footer>
+
+</div>
+
+<script>
+
+function toggleSearch(){
+const box = document.getElementById("searchBox");
+box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
+}
+
+function searchText(){
+let input = document.getElementById("searchInput").value.toLowerCase();
+let content = document.getElementById("article");
+let text = content.innerText.toLowerCase();
+
+if(text.includes(input) && input.length > 0){
+content.scrollIntoView({behavior:"smooth"});
+}
+}
+
+</script>
 
 </body>
 </html>
