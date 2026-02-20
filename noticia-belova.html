@@ -227,66 +227,39 @@ ARKHIV-X — Central Pública de Comunicação
 
 <script>
 
-/* ABRIR BUSCA */
-
 function toggleSearch(){
 const box = document.getElementById("searchBox");
 box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
 }
 
-/* BUSCAR TEXTO */
+/* BUSCA FUNCIONAL */
 
 function searchText(){
 
 let input = document.getElementById("searchInput").value.toLowerCase();
 let article = document.getElementById("article");
 
-removeMarks(article);
+if(input.length === 0) return;
 
-if(input.length < 2) return;
+let paragraphs = article.getElementsByTagName("p");
 
-let walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, null, false);
+for(let p of paragraphs){
 
-while(walker.nextNode()){
-let node = walker.currentNode;
-let text = node.nodeValue.toLowerCase();
+let text = p.innerText.toLowerCase();
 
 if(text.includes(input)){
 
-let span = document.createElement("mark");
-let start = text.indexOf(input);
-let end = start + input.length;
-
-let before = node.nodeValue.substring(0,start);
-let match = node.nodeValue.substring(start,end);
-let after = node.nodeValue.substring(end);
-
-span.textContent = match;
-
-let frag = document.createDocumentFragment();
-frag.append(before);
-frag.append(span);
-frag.append(after);
-
-node.parentNode.replaceChild(frag,node);
-
-span.scrollIntoView({behavior:"smooth", block:"center"});
+p.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
 
 break;
-}
-}
 
 }
 
-/* LIMPAR MARCAÇÕES */
+}
 
-function removeMarks(element){
-let marks = element.querySelectorAll("mark");
-marks.forEach(m=>{
-let parent = m.parentNode;
-parent.replaceChild(document.createTextNode(m.textContent),m);
-parent.normalize();
-});
 }
 
 </script>
