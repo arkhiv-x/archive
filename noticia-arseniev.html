@@ -10,6 +10,7 @@
 :root{
 --bg-main:#0f1218;
 --bg-dark:#12161c;
+--bg-panel:#1a1f27;
 --text-main:#e6e6e6;
 --text-muted:#9aa3ad;
 --accent:#3a5a8c;
@@ -27,16 +28,28 @@ background:var(--bg-main);
 color:var(--text-main);
 }
 
+/* HEADER */
+
 header{
 background:var(--bg-dark);
 padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+border-bottom:1px solid #222;
 }
 
 header h1{
-font-size:18px;
+font-size:20px;
+letter-spacing:1px;
+}
+
+.search-btn{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
 }
 
 .search-box{
@@ -51,19 +64,15 @@ border:none;
 font-size:13px;
 }
 
-.search-btn{
-background:none;
-border:none;
-color:white;
-font-size:22px;
-cursor:pointer;
-}
+/* MAIN */
 
 .main{
 max-width:800px;
 margin:auto;
 padding:30px 20px 50px;
 }
+
+/* TITLE */
 
 .title{
 font-size:26px;
@@ -78,18 +87,19 @@ margin-bottom:18px;
 line-height:1.5;
 }
 
+/* META */
+
 .meta{
 font-size:12px;
 color:var(--text-muted);
 margin-bottom:20px;
 }
 
-/* IMAGEM CORRIGIDA */
+/* IMAGE — PADRÃO VIKTOR */
 
 .image{
 width:100%;
 margin-bottom:25px;
-text-align:center;
 }
 
 .image img{
@@ -97,8 +107,9 @@ width:100%;
 max-height:420px;
 object-fit:contain;
 border-radius:6px;
-background:#0b0e13;
 }
+
+/* TEXT */
 
 .article p{
 font-size:15px;
@@ -115,6 +126,8 @@ font-style:italic;
 margin:20px 0;
 }
 
+/* FOOTER */
+
 footer{
 margin-top:50px;
 text-align:center;
@@ -125,13 +138,6 @@ color:var(--text-muted);
 a{
 color:var(--accent);
 text-decoration:none;
-}
-
-mark{
-background:#3a5a8c;
-color:white;
-padding:2px 4px;
-border-radius:3px;
 }
 
 </style>
@@ -146,7 +152,7 @@ border-radius:3px;
 <div>
 <button class="search-btn" onclick="toggleSearch()">⌕</button>
 <span class="search-box" id="searchBox">
-<input type="text" id="searchInput" placeholder="Buscar..." onkeyup="searchText()">
+<input type="text" placeholder="Buscar..." onkeyup="searchText(this.value)">
 </span>
 </div>
 
@@ -169,13 +175,13 @@ Por Redação ARKHIV-X — 03/03/2025 · 10h12
 </div>
 
 <div class="image">
-<img src="magnata-arseniev.jpg" alt="Nikolai Arseniev">
+  <img src="magnata-arseniev.jpg" alt="Nikolai Arseniev">
 </div>
 
-<div class="article" id="article">
+<div class="article" id="articleContent">
 
 <p>
-O empresário <mark>Nikolai Arseniev</mark>, fundador do grupo tecnológico
+O empresário Nikolai Arseniev, fundador do grupo tecnológico
 Arseniev Dynamics, anunciou nesta semana a expansão de operações
 internacionais voltadas ao desenvolvimento de soluções de segurança
 e monitoramento inteligente para ambientes urbanos e industriais.
@@ -228,40 +234,25 @@ ARKHIV-X — Central Pública de Comunicação
 <script>
 
 function toggleSearch(){
-const box = document.getElementById("searchBox");
-box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
+  const box = document.getElementById("searchBox");
+  box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
 }
 
-/* BUSCA FUNCIONAL */
-
-function searchText(){
-
-let input = document.getElementById("searchInput").value.toLowerCase();
-let article = document.getElementById("article");
-
-if(input.length === 0) return;
-
-let paragraphs = article.getElementsByTagName("p");
-
-for(let p of paragraphs){
-
-let text = p.innerText.toLowerCase();
-
-if(text.includes(input)){
-
-p.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-break;
-
-}
-
-}
-
+function searchText(text){
+  const content = document.getElementById("articleContent");
+  const innerHTML = content.innerHTML;
+  const index = innerHTML.toLowerCase().indexOf(text.toLowerCase());
+  
+  if(index >= 0){
+    const element = content;
+    window.scrollTo({
+      top: element.offsetTop + index * 0.2,
+      behavior: "smooth"
+    });
+  }
 }
 
 </script>
+
 </body>
 </html>
