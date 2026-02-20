@@ -27,8 +27,6 @@ background:var(--bg-main);
 color:var(--text-main);
 }
 
-/* HEADER */
-
 header{
 background:var(--bg-dark);
 padding:15px 20px;
@@ -61,8 +59,6 @@ font-size:22px;
 cursor:pointer;
 }
 
-/* MAIN */
-
 .main{
 max-width:800px;
 margin:auto;
@@ -88,18 +84,21 @@ color:var(--text-muted);
 margin-bottom:20px;
 }
 
-/* IMAGE — CORRIGIDA */
+/* IMAGEM CORRIGIDA */
 
 .image{
 width:100%;
-aspect-ratio:16/9;
-background:url(magnata-arseniev.jpg) center/contain no-repeat;
-background-color:#0b0e13;
-border-radius:6px;
 margin-bottom:25px;
+text-align:center;
 }
 
-/* ARTICLE */
+.image img{
+width:100%;
+max-height:420px;
+object-fit:contain;
+border-radius:6px;
+background:#0b0e13;
+}
 
 .article p{
 font-size:15px;
@@ -127,8 +126,6 @@ a{
 color:var(--accent);
 text-decoration:none;
 }
-
-/* SEARCH MARK */
 
 mark{
 background:#3a5a8c;
@@ -171,12 +168,14 @@ logística e inteligência aplicada a infraestrutura crítica.
 Por Redação ARKHIV-X — 03/03/2025 · 10h12
 </div>
 
-<div class="image"></div>
+<div class="image">
+<img src="magnata-arseniev.jpg" alt="Nikolai Arseniev">
+</div>
 
 <div class="article" id="article">
 
 <p>
-O empresário Nikolai Arseniev, fundador do grupo tecnológico
+O empresário <mark>Nikolai Arseniev</mark>, fundador do grupo tecnológico
 Arseniev Dynamics, anunciou nesta semana a expansão de operações
 internacionais voltadas ao desenvolvimento de soluções de segurança
 e monitoramento inteligente para ambientes urbanos e industriais.
@@ -228,66 +227,22 @@ ARKHIV-X — Central Pública de Comunicação
 
 <script>
 
-/* ABRIR BUSCA */
-
 function toggleSearch(){
 const box = document.getElementById("searchBox");
 box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
 }
 
-/* BUSCAR TEXTO */
+/* BUSCA CORRIGIDA */
 
 function searchText(){
-
 let input = document.getElementById("searchInput").value.toLowerCase();
-let article = document.getElementById("article");
+let content = document.getElementById("article");
 
-removeMarks(article);
+if(input.length === 0) return;
 
-if(input.length < 2) return;
-
-let walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, null, false);
-
-while(walker.nextNode()){
-let node = walker.currentNode;
-let text = node.nodeValue.toLowerCase();
-
-if(text.includes(input)){
-
-let span = document.createElement("mark");
-let start = text.indexOf(input);
-let end = start + input.length;
-
-let before = node.nodeValue.substring(0,start);
-let match = node.nodeValue.substring(start,end);
-let after = node.nodeValue.substring(end);
-
-span.textContent = match;
-
-let frag = document.createDocumentFragment();
-frag.append(before);
-frag.append(span);
-frag.append(after);
-
-node.parentNode.replaceChild(frag,node);
-
-span.scrollIntoView({behavior:"smooth", block:"center"});
-
-break;
+if(content.innerText.toLowerCase().includes(input)){
+content.scrollIntoView({behavior:"smooth"});
 }
-}
-
-}
-
-/* LIMPAR MARCAÇÕES */
-
-function removeMarks(element){
-let marks = element.querySelectorAll("mark");
-marks.forEach(m=>{
-let parent = m.parentNode;
-parent.replaceChild(document.createTextNode(m.textContent),m);
-parent.normalize();
-});
 }
 
 </script>
