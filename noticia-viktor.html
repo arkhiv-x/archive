@@ -95,14 +95,18 @@ color:var(--text-muted);
 margin-bottom:20px;
 }
 
-/* IMAGE */
+/* IMAGE — CORRIGIDO */
 
 .image{
 width:100%;
-height:260px;
-background:url(sokolov.jpg) center/cover no-repeat;
-border-radius:4px;
 margin-bottom:25px;
+}
+
+.image img{
+width:100%;
+max-height:420px;
+object-fit:contain;
+border-radius:6px;
 }
 
 /* TEXT */
@@ -168,7 +172,9 @@ Fundador de grupos estratégicos internacionais, executivo se consolida como uma
 Por Redação ARKHIV-X — 03/03/2025 · 10h12
 </div>
 
-<div class="image"></div>
+<div class="image">
+  <img src="sokolov.jpg" alt="Viktor Sokolov">
+</div>
 
 <div class="article" id="articleContent">
 
