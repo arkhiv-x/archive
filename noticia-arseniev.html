@@ -232,20 +232,36 @@ const box = document.getElementById("searchBox");
 box.style.display = box.style.display === "inline-block" ? "none" : "inline-block";
 }
 
-/* BUSCA CORRIGIDA */
+/* BUSCA FUNCIONAL */
 
 function searchText(){
+
 let input = document.getElementById("searchInput").value.toLowerCase();
-let content = document.getElementById("article");
+let article = document.getElementById("article");
 
 if(input.length === 0) return;
 
-if(content.innerText.toLowerCase().includes(input)){
-content.scrollIntoView({behavior:"smooth"});
+let paragraphs = article.getElementsByTagName("p");
+
+for(let p of paragraphs){
+
+let text = p.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+p.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+break;
+
 }
+
+}
+
 }
 
 </script>
-
 </body>
 </html>
