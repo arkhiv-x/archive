@@ -29,8 +29,6 @@ color:var(--text-main);
 min-height:100vh;
 }
 
-/* HEADER */
-
 header{
 background:var(--bg-dark);
 padding:18px 25px;
@@ -51,8 +49,6 @@ text-decoration:none;
 font-size:13px;
 }
 
-/* MAIN */
-
 .main{
 max-width:1000px;
 margin:auto;
@@ -70,16 +66,12 @@ color:var(--text-muted);
 margin-bottom:30px;
 }
 
-/* GRID */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 margin-bottom:40px;
 }
-
-/* FOLDER */
 
 .folder{
 background:var(--bg-panel);
@@ -106,13 +98,12 @@ font-size:14px;
 line-height:1.4;
 }
 
-/* FILE LIST */
-
 .files{
 background:var(--bg-panel);
 border:1px solid #222;
 border-radius:6px;
 overflow:hidden;
+margin-top:10px;
 }
 
 .file{
@@ -135,7 +126,9 @@ text-decoration:none;
 display:block;
 }
 
-/* FOOTER */
+.hidden{
+display:none;
+}
 
 footer{
 margin-top:50px;
@@ -144,24 +137,22 @@ font-size:12px;
 color:var(--text-muted);
 }
 
-.hidden{
-display:none;
-}
-
 </style>
 
 <script>
-function abrirPasta(id){
 
-let pasta = document.getElementById(id);
+function abrirPasta(el){
 
-if(pasta.classList.contains("hidden")){
-pasta.classList.remove("hidden");
+let container = el.nextElementSibling;
+
+if(container.classList.contains("hidden")){
+container.classList.remove("hidden");
 }else{
-pasta.classList.add("hidden");
+container.classList.add("hidden");
 }
 
 }
+
 </script>
 
 </head>
@@ -181,42 +172,17 @@ pasta.classList.add("hidden");
 Conteúdo interno vinculado à investigação paralela conduzida pelo agente Aleksei.
 </p>
 
-<div class="grid">
 
-<!-- TESTEMUNHOS -->
+<!-- ================= TESTEMUNHOS ================= -->
 
-<div class="folder" onclick="abrirPasta('testemunhos')">
+<div>
+
+<div class="folder" onclick="abrirPasta(this)">
 <div class="icon">📂</div>
 <div class="name">Testemunhos Coletados</div>
 </div>
 
-<!-- RECONSTRUÇÃO -->
-
-<div class="folder" onclick="abrirPasta('reconstrucao')">
-<div class="icon">📂</div>
-<div class="name">Reconstrução de Evento</div>
-</div>
-
-<!-- ANOTAÇÕES -->
-
-<div class="folder" onclick="abrirPasta('anotacoes')">
-<div class="icon">📂</div>
-<div class="name">Anotações Pessoais</div>
-</div>
-
-<!-- RELATÓRIO -->
-
-<div class="folder" onclick="abrirPasta('relatorio')">
-<div class="icon">📂</div>
-<div class="name">Relatório Geral Compilado</div>
-</div>
-
-</div>
-
-
-<!-- ================= TESTEMUNHOS ================= -->
-
-<div id="testemunhos" class="files hidden">
+<div class="files hidden">
 
 <div class="file">
 <a href="fã_pavel_voronin.pdf" target="_blank">
@@ -238,10 +204,19 @@ Depoimento — Oleg Baranov
 
 </div>
 
+</div>
+
 
 <!-- ================= RECONSTRUÇÃO ================= -->
 
-<div id="reconstrucao" class="files hidden">
+<div>
+
+<div class="folder" onclick="abrirPasta(this)">
+<div class="icon">📂</div>
+<div class="name">Reconstrução de Evento</div>
+</div>
+
+<div class="files hidden">
 
 <div class="file">
 <a href="#">
@@ -257,10 +232,19 @@ Mapa de Posicionamento — Área Industrial
 
 </div>
 
+</div>
+
 
 <!-- ================= ANOTAÇÕES ================= -->
 
-<div id="anotacoes" class="files hidden">
+<div>
+
+<div class="folder" onclick="abrirPasta(this)">
+<div class="icon">📂</div>
+<div class="name">Anotações Pessoais</div>
+</div>
+
+<div class="files hidden">
 
 <div class="file">
 <a href="#">
@@ -276,15 +260,26 @@ Hipóteses de Motivação
 
 </div>
 
+</div>
+
 
 <!-- ================= RELATÓRIO ================= -->
 
-<div id="relatorio" class="files hidden">
+<div>
+
+<div class="folder" onclick="abrirPasta(this)">
+<div class="icon">📂</div>
+<div class="name">Relatório Geral Compilado</div>
+</div>
+
+<div class="files hidden">
 
 <div class="file">
 <a href="#">
 Relatório Consolidado Parcial — Caso Lotus
 </a>
+</div>
+
 </div>
 
 </div>
