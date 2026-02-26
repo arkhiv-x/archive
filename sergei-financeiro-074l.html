@@ -7,119 +7,56 @@
 
 <style>
 
-:root{
---bg-main:#0f1218;
---bg-panel:#1a1f27;
---text-main:#e6e6e6;
---text-muted:#9aa3ad;
---accent:#3a5a8c;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:var(--bg-main);
-color:var(--text-main);
-}
-
-.main{
-max-width:900px;
-margin:auto;
-padding:40px 25px;
-}
-
-h1{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.meta{
-font-size:13px;
-color:var(--text-muted);
-margin-bottom:30px;
-}
+/* TABELA MAIS CLARA E INTERATIVA */
 
 .table{
-background:var(--bg-panel);
-border:1px solid #222;
-border-radius:6px;
+background:#1c2330;
+border-radius:8px;
 overflow:hidden;
+border:1px solid #2a3446;
 }
 
 .row{
-display:flex;
-justify-content:space-between;
-align-items:center;
+display:grid;
+grid-template-columns: 120px 1fr 160px;
 padding:14px 16px;
-border-bottom:1px solid #222;
+border-bottom:1px solid #2a3446;
 font-size:13px;
+cursor:pointer;
+transition:0.2s;
 }
 
 .row:last-child{
 border-bottom:none;
 }
 
+.row:hover{
+background:#263248;
+}
+
 .row.header{
-color:var(--text-muted);
+background:#18202c;
 font-weight:bold;
-background:#151a22;
+color:#9aa3ad;
+cursor:default;
 }
 
 .col{
-flex:1;
+display:flex;
+align-items:center;
 }
 
-.col.small{
-flex:0.7;
+.small{
+color:#cfd6e6;
 }
 
-.col.action{
-flex:0.6;
-text-align:right;
-}
-
-.highlight{
-color:#d4b24c;
-}
-
-.btn{
-background:#0e141c;
-border:1px solid #2a3545;
-padding:6px 10px;
-border-radius:4px;
-color:#9fb3d1;
+.link-row{
 text-decoration:none;
-font-size:12px;
-transition:0.2s;
-}
-
-.btn:hover{
-border-color:var(--accent);
-color:white;
-}
-
-.note{
-margin-top:25px;
-font-size:13px;
-color:#aaa;
-line-height:1.6;
-}
-
-a{
-color:var(--accent);
-text-decoration:none;
-font-size:13px;
+color:inherit;
+display:contents;
 }
 
 </style>
-</head>
-
-<body>
 
 <div class="main">
 
@@ -135,52 +72,34 @@ Classificação: Não oficial
 <div class="table">
 
 <div class="row header">
-<div class="col small">Data</div>
-<div class="col">Origem</div>
-<div class="col">Destino</div>
-<div class="col small">Valor</div>
-<div class="col action">Documento</div>
+<div class="col">Data</div>
+<div class="col">Tipo de Documento</div>
+<div class="col">Referência</div>
 </div>
 
+<a class="link-row" href="registro_orion_trust.pdf" target="_blank">
 <div class="row">
 <div class="col small">12/03/2024</div>
-<div class="col">Orion Trust</div>
-<div class="col">Helix Consulting</div>
-<div class="col small">$ 48.000</div>
-<div class="col action">
-<a class="btn" href="registro_orion_trust.pdf" target="_blank">📄 Abrir</a>
+<div class="col">Registro Financeiro Corporativo</div>
+<div class="col">TRX-8841</div>
 </div>
-</div>
+</a>
 
+<a class="link-row" href="comprovante_helix_ania.pdf" target="_blank">
 <div class="row">
 <div class="col small">18/03/2024</div>
-<div class="col">Helix Consulting</div>
-<div class="col highlight">A. Petrova</div>
-<div class="col small">$ 15.500</div>
-<div class="col action">
-<a class="btn" href="comprovante_helix_ania.pdf" target="_blank">📄 Abrir</a>
+<div class="col">Comprovante Bancário</div>
+<div class="col">DOC-1192</div>
 </div>
-</div>
+</a>
 
-<div class="row">
-<div class="col small">25/03/2024</div>
-<div class="col">Orion Trust</div>
-<div class="col">Helix Consulting</div>
-<div class="col small">$ 52.000</div>
-<div class="col action">
-<a class="btn" href="registro_orion_trust.pdf" target="_blank">📄 Abrir</a>
-</div>
-</div>
-
+<a class="link-row" href="extrato_ania_petrova.pdf" target="_blank">
 <div class="row">
 <div class="col small">02/04/2024</div>
-<div class="col">Helix Consulting</div>
-<div class="col highlight">A. Petrova</div>
-<div class="col small">$ 18.200</div>
-<div class="col action">
-<a class="btn" href="extrato_ania_petrova.pdf" target="_blank">📄 Abrir</a>
+<div class="col">Extrato Conta Corrente</div>
+<div class="col">ACC-4430</div>
 </div>
-</div>
+</a>
 
 </div>
 
