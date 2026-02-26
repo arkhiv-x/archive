@@ -5,9 +5,55 @@
 <title>074-L — Registros Financeiros</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <style>
 
-/* TABELA MAIS CLARA E INTERATIVA */
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+.main{
+max-width:900px;
+margin:auto;
+padding:40px 25px;
+}
+
+h1{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.meta{
+font-size:13px;
+color:var(--text-muted);
+margin-bottom:30px;
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+font-size:13px;
+}
+
+/* ========================= */
+/* TABELA DOCUMENTOS */
+/* ========================= */
 
 .table{
 background:#1c2330;
@@ -54,6 +100,17 @@ color:#cfd6e6;
 text-decoration:none;
 color:inherit;
 display:contents;
+}
+
+/* ========================= */
+/* TEXTO INFERIOR */
+/* ========================= */
+
+.note{
+margin-top:25px;
+font-size:13px;
+color:#aaa;
+line-height:1.6;
 }
 
 </style>
