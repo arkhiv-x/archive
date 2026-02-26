@@ -76,11 +76,16 @@ margin-bottom:40px;
 .folder{
 background:var(--bg-panel);
 border:1px solid #222;
-border-radius:6px;
+border-radius:8px;
 padding:30px 20px;
 text-align:center;
 cursor:pointer;
 transition:.2s;
+margin-top:20px;   /* 👈 espaço entre pastas */
+}
+
+.folder:first-child{
+margin-top:0;
 }
 
 .folder:hover{
@@ -101,9 +106,10 @@ line-height:1.4;
 .files{
 background:var(--bg-panel);
 border:1px solid #222;
-border-radius:6px;
+border-radius:8px;
 overflow:hidden;
-margin-top:10px;
+margin-top:12px;
+margin-bottom:25px;   /* 👈 separa da próxima pasta */
 }
 
 .file{
