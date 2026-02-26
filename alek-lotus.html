@@ -2,15 +2,15 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Caso Lotus — Arquivo Restrito</title>
+<title>Material Operacional — Caso Lotus</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 :root{
 --bg-main:#0f1218;
---bg-panel:#1a1f27;
 --bg-dark:#12161c;
+--bg-panel:#1a1f27;
 --text-main:#e6e6e6;
 --text-muted:#9aa3ad;
 --accent:#3a5a8c;
@@ -26,6 +26,7 @@ font-family:Arial,sans-serif;
 body{
 background:var(--bg-main);
 color:var(--text-main);
+min-height:100vh;
 }
 
 /* HEADER */
@@ -39,6 +40,11 @@ justify-content:space-between;
 align-items:center;
 }
 
+header h1{
+font-size:18px;
+font-weight:500;
+}
+
 header a{
 color:var(--text-muted);
 text-decoration:none;
@@ -48,60 +54,40 @@ font-size:13px;
 /* MAIN */
 
 .main{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:40px 25px;
 }
 
-/* LOGIN */
-
-.login{
-background:var(--bg-panel);
-border:1px solid #222;
-padding:30px;
-max-width:420px;
-margin:auto;
-text-align:center;
+.main h2{
+font-size:22px;
+margin-bottom:6px;
 }
 
-input{
-width:100%;
-padding:10px;
-margin-top:12px;
-border:none;
-border-radius:4px;
-font-size:14px;
+.subtitle{
+font-size:13px;
+color:var(--text-muted);
+margin-bottom:30px;
 }
 
-button{
-margin-top:15px;
-padding:10px 15px;
-border:none;
-background:var(--accent);
-color:white;
-cursor:pointer;
-border-radius:4px;
-}
-
-/* FILES */
-
-.files{
-display:none;
-margin-top:30px;
-}
+/* GRID */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
+gap:25px;
+margin-bottom:40px;
 }
+
+/* FOLDER */
 
 .folder{
 background:var(--bg-panel);
 border:1px solid #222;
 border-radius:6px;
-padding:25px;
+padding:30px 20px;
 text-align:center;
+cursor:pointer;
 transition:.2s;
 }
 
@@ -110,15 +96,9 @@ border-color:var(--accent);
 transform:translateY(-3px);
 }
 
-.folder a{
-text-decoration:none;
-color:var(--text-main);
-display:block;
-}
-
 .icon{
-font-size:40px;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:12px;
 }
 
 .name{
@@ -126,159 +106,196 @@ font-size:14px;
 line-height:1.4;
 }
 
-/* PDF LIST */
+/* FILE LIST */
 
-.list{
-margin-top:25px;
+.files{
 background:var(--bg-panel);
 border:1px solid #222;
+border-radius:6px;
+overflow:hidden;
 }
 
-.item{
+.file{
 padding:14px 16px;
 border-bottom:1px solid #222;
-cursor:pointer;
-transition:.15s;
+transition:.2s;
 }
 
-.item:hover{
-background:#202631;
+.file:last-child{
+border-bottom:none;
 }
+
+.file:hover{
+background:#202734;
+}
+
+.file a{
+color:var(--text-main);
+text-decoration:none;
+display:block;
+}
+
+/* FOOTER */
 
 footer{
-margin-top:40px;
+margin-top:50px;
 text-align:center;
 font-size:12px;
 color:var(--text-muted);
 }
 
+.hidden{
+display:none;
+}
+
 </style>
+
+<script>
+
+function abrirPasta(id){
+let pasta = document.getElementById(id);
+
+if(pasta.style.display === "block"){
+pasta.style.display = "none";
+}else{
+pasta.style.display = "block";
+}
+
+}
+
+</script>
+
 </head>
 
 <body>
 
 <header>
+<h1>ARKHIV-X | Material Operacional</h1>
 <a href="arquivos-aleksei.html">← Voltar</a>
 </header>
 
 <div class="main">
 
-<h2>Arquivo Confidencial — Caso Lotus</h2>
+<h2>Caso Lotus — Arquivos Compilados</h2>
 
 <p class="subtitle">
-Material paralelo mantido fora do registro institucional.
+Conteúdo interno vinculado à investigação paralela conduzida pelo agente Aleksei.
 </p>
-
-<!-- LOGIN -->
-
-<div class="login" id="loginBox">
-
-<p><strong>Acesso restrito</strong></p>
-
-<p style="margin-top:10px;font-size:13px;color:#aaa;">
-Dica: “filha”
-</p>
-
-<input type="password" id="senha" placeholder="Senha">
-
-<button onclick="entrar()">Acessar</button>
-
-<p id="erro" style="margin-top:10px;color:#c85b5b;display:none;">
-Senha incorreta
-</p>
-
-</div>
-
-<!-- FILES -->
-
-<div class="files" id="files">
 
 <div class="grid">
 
-<div class="folder">
-<a href="#depoimentos">
+<!-- TESTEMUNHOS -->
+
+<div class="folder" onclick="abrirPasta('testemunhos')">
 <div class="icon">📂</div>
-<div class="name">Testemunhos<br>Coletados</div>
-</a>
+<div class="name">Testemunhos Coletados</div>
 </div>
 
-<div class="folder">
-<a href="reconstrucao-lotus.html">
+<!-- RECONSTRUÇÃO -->
+
+<div class="folder" onclick="abrirPasta('reconstrucao')">
 <div class="icon">📂</div>
-<div class="name">Reconstrução<br>de Evento</div>
-</a>
+<div class="name">Reconstrução de Evento</div>
 </div>
 
-<div class="folder">
-<a href="anotacoes-alek-lotus.html">
+<!-- ANOTAÇÕES -->
+
+<div class="folder" onclick="abrirPasta('anotacoes')">
 <div class="icon">📂</div>
-<div class="name">Anotações<br>Pessoais</div>
-</a>
+<div class="name">Anotações Pessoais</div>
 </div>
 
-<div class="folder">
-<a href="relatorio-geral-lotus.html">
+<!-- RELATÓRIO -->
+
+<div class="folder" onclick="abrirPasta('relatorio')">
 <div class="icon">📂</div>
-<div class="name">Relatório Geral<br>Compilado</div>
-</a>
+<div class="name">Relatório Geral Compilado</div>
 </div>
 
 </div>
 
 
-<!-- PDF DEPOIMENTOS -->
+<!-- ================= TESTEMUNHOS ================= -->
 
-<div id="depoimentos" class="list">
+<div id="testemunhos" class="files hidden">
 
-<div class="item" onclick="abrir('depoimento_pavel_voronin.pdf')">
+<div class="file">
+<a href="depoimento_pavel_voronin.pdf" target="_blank">
 Depoimento — Pavel Voronin
+</a>
 </div>
 
-<div class="item" onclick="abrir('depoimento_katerina_mirova.pdf')">
+<div class="file">
+<a href="depoimento_katerina_mirova.pdf" target="_blank">
 Depoimento — Katerina Mirova
+</a>
 </div>
 
-<div class="item" onclick="abrir('depoimento_oleg_baranov.pdf')">
+<div class="file">
+<a href="depoimento_oleg_baranov.pdf" target="_blank">
 Depoimento — Oleg Baranov
+</a>
 </div>
 
 </div>
 
+
+<!-- ================= RECONSTRUÇÃO ================= -->
+
+<div id="reconstrucao" class="files hidden">
+
+<div class="file">
+<a href="#">
+Linha Temporal do Evento — Versão 1
+</a>
 </div>
+
+<div class="file">
+<a href="#">
+Mapa de Posicionamento — Área Industrial
+</a>
+</div>
+
+</div>
+
+
+<!-- ================= ANOTAÇÕES ================= -->
+
+<div id="anotacoes" class="files hidden">
+
+<div class="file">
+<a href="#">
+Observações Pessoais do Investigador
+</a>
+</div>
+
+<div class="file">
+<a href="#">
+Hipóteses de Motivação
+</a>
+</div>
+
+</div>
+
+
+<!-- ================= RELATÓRIO ================= -->
+
+<div id="relatorio" class="files hidden">
+
+<div class="file">
+<a href="#">
+Relatório Consolidado Parcial — Caso Lotus
+</a>
+</div>
+
+</div>
+
 
 <footer>
-ARKHIV-X — Sistema Monitorado
+ARKHIV-X — Sistema Interno Monitorado
 </footer>
 
 </div>
-
-
-<script>
-
-function entrar(){
-
-let senha = document.getElementById("senha").value;
-
-if(senha === "Miya"){
-
-document.getElementById("loginBox").style.display="none";
-document.getElementById("files").style.display="block";
-
-}else{
-
-document.getElementById("erro").style.display="block";
-
-}
-
-}
-
-function abrir(pdf){
-
-window.open(pdf, "_blank");
-
-}
-
-</script>
 
 </body>
 </html>
