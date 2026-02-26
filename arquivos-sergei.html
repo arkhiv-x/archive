@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Arquivos Financeiros | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-dark:#12161c;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+--alert:#c85b5b;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+min-height:100vh;
+}
+
+header{
+background:var(--bg-dark);
+padding:18px 25px;
+border-bottom:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:17px;
+font-weight:500;
+}
+
+header a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:13px;
+}
+
+.main{
+max-width:1000px;
+margin:auto;
+padding:40px 25px;
+}
+
+.main h2{
+font-size:22px;
+margin-bottom:6px;
+}
+
+.subtitle{
+font-size:13px;
+color:var(--text-muted);
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+gap:24px;
+}
+
+.folder{
+background:var(--bg-panel);
+border:1px solid #222;
+border-radius:6px;
+padding:26px 15px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
+}
+
+.folder:hover{
+border-color:var(--accent);
+transform:translateY(-3px);
+}
+
+.folder a{
+text-decoration:none;
+color:var(--text-main);
+display:block;
+}
+
+.icon{
+font-size:42px;
+margin-bottom:12px;
+}
+
+.name{
+font-size:13px;
+line-height:1.4;
+}
+
+.locked{
+border-color:#3a2a2a;
+}
+
+.locked .icon{
+color:#c85b5b;
+}
+
+footer{
+margin-top:50px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>ARKHIV-X | Arquivos Financeiros</h1>
+
+<a href="painel-sergei.html">← Voltar ao Perfil</a>
+
+</header>
+
+<div class="main">
+
+<h2>Arquivos — Sergei Volkov</h2>
+
+<p class="subtitle">
+Registros vinculados à auditoria financeira e rastreamento econômico institucional
+</p>
+
+<div class="grid">
+
+<!-- REGISTROS -->
+
+<div class="folder">
+<a href="sergei-registros.html">
+
+<div class="icon">📂</div>
+<div class="name">
+Registros Financeiros<br>
+(2018–2025)
+</div>
+
+</a>
+</div>
+
+<!-- AUDITORIAS -->
+
+<div class="folder">
+<a href="sergei-auditorias.html">
+
+<div class="icon">📂</div>
+<div class="name">
+Auditorias Internas<br>
+Relatórios Administrativos
+</div>
+
+</a>
+</div>
+
+<!-- CASO LOTUS -->
+
+<div class="folder locked">
+<a href="sergei-lotus.html">
+
+<div class="icon">🔒</div>
+<div class="name">
+Caso 074-L<br>
+Transações Sensíveis
+</div>
+
+</a>
+</div>
+
+</div>
+
+<footer>
+
+ARKHIV-X — Sistema Interno Monitorado
+
+</footer>
+
+</div>
+
+</body>
+</html>
