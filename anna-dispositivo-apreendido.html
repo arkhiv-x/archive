@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Dispositivo Apreendido — Análise Técnica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+--danger:#b84a4a;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+.main{
+max-width:900px;
+margin:auto;
+padding:40px 25px;
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+font-size:13px;
+}
+
+h1{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.meta{
+font-size:13px;
+color:var(--text-muted);
+margin-bottom:25px;
+}
+
+.panel{
+background:var(--bg-panel);
+border:1px solid #222;
+border-radius:8px;
+padding:20px;
+margin-bottom:25px;
+}
+
+.section{
+margin-bottom:20px;
+}
+
+.label{
+font-size:12px;
+color:var(--text-muted);
+margin-bottom:4px;
+}
+
+.value{
+font-size:14px;
+}
+
+.highlight{
+color:#d4b24c;
+font-weight:bold;
+}
+
+.log{
+background:#0b0e13;
+border:1px solid #222;
+padding:12px;
+border-radius:6px;
+font-family:monospace;
+font-size:12px;
+line-height:1.6;
+white-space:pre-line;
+}
+
+.alert{
+border-left:3px solid var(--danger);
+padding:12px;
+background:#1a1414;
+font-size:13px;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+<a href="arquivos-anna.html">← Voltar</a>
+
+<h1>Dispositivo Apreendido — Análise Técnica</h1>
+
+<p class="meta">
+Origem: Pen Drive corporativo recuperado<br>
+Status: Dados parcialmente corrompidos<br>
+Responsável: Analista Anna Petrova
+</p>
+
+<div class="panel">
+
+<div class="section">
+<div class="label">Identificação do Dispositivo</div>
+<div class="value">USB Storage — Modelo Genérico 32GB</div>
+</div>
+
+<div class="section">
+<div class="label">Sistema de Arquivos</div>
+<div class="value">FAT32 — Estrutura modificada manualmente</div>
+</div>
+
+<div class="section">
+<div class="label">Status de Criptografia</div>
+<div class="value">Proteção removida via recuperação de blocos</div>
+</div>
+
+</div>
+
+
+<div class="panel">
+
+<div class="section">
+<div class="label">Logs Recuperados</div>
+
+<div class="log">
+[RECOVERED SESSION LOG]
+
+host_access: helix-consulting.net
+auth_node: external_gateway_02
+
+user_id: anton.volkov
+access_level: privileged
+
+remote_sync: enabled
+file_group: LOTUS_PROTOCOL
+
+timestamp: 2024-03-11T22:14:09
+status: transfer_complete
+</div>
+
+</div>
+
+<div class="alert">
+Correlação de metadados indica que o usuário externo possuía
+credenciais administrativas temporárias vinculadas à infraestrutura
+da Helix Consulting durante o período da operação.
+</div>
+
+</div>
+
+
+<div class="panel">
+
+<div class="section">
+<div class="label">Conclusão Técnica</div>
+
+<div class="value">
+A análise dos registros recuperados confirma interação direta entre
+o ambiente corporativo investigado e um agente externo identificado
+como <span class="highlight">Anton Volkov</span>.
+
+Os padrões de acesso e privilégio sugerem coordenação operacional
+em nível estratégico, incompatível com atividades técnicas comuns.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
