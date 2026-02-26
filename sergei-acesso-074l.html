@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Acesso Restrito | ARKHIV-X</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+--alert:#c85b5b;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.panel{
+background:var(--bg-panel);
+border:1px solid #222;
+padding:30px;
+width:320px;
+text-align:center;
+}
+
+h2{
+margin-bottom:15px;
+font-size:18px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:12px 0;
+background:#0b0e13;
+border:1px solid #333;
+color:white;
+border-radius:4px;
+text-align:center;
+}
+
+button{
+background:var(--accent);
+border:none;
+padding:10px 20px;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+.error{
+color:var(--alert);
+font-size:12px;
+margin-top:10px;
+display:none;
+}
+
+a{
+display:block;
+margin-top:20px;
+font-size:12px;
+color:var(--text-muted);
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+<h2>Acesso Institucional</h2>
+
+<p style="font-size:13px;color:#aaa">
+Campo protegido — Unidade Financeira
+</p>
+
+<input type="password" id="senha" placeholder="Senha">
+
+<button onclick="verificar()">Acessar</button>
+
+<div class="error" id="erro">Senha incorreta</div>
+
+<a href="arquivos-sergei.html">← Voltar</a>
+
+</div>
+
+<script>
+
+function verificar(){
+
+let senha = document.getElementById("senha").value;
+
+if(senha === "2009"){
+window.location.href = "sergei-financeiro-074l.html";
+}else{
+document.getElementById("erro").style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
