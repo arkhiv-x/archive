@@ -151,18 +151,17 @@ display:none;
 </style>
 
 <script>
-
 function abrirPasta(id){
+
 let pasta = document.getElementById(id);
 
-if(pasta.style.display === "block"){
-pasta.style.display = "none";
+if(pasta.classList.contains("hidden")){
+pasta.classList.remove("hidden");
 }else{
-pasta.style.display = "block";
+pasta.classList.add("hidden");
 }
 
 }
-
 </script>
 
 </head>
