@@ -11,6 +11,9 @@
 :root{
 --bg-main:#0f1218;
 --bg-panel:#1a1f27;
+--bg-row:#1c2330;
+--bg-row-hover:#243047;
+--border:#2a3446;
 --text-main:#e6e6e6;
 --text-muted:#9aa3ad;
 --accent:#3a5a8c;
@@ -51,24 +54,23 @@ text-decoration:none;
 font-size:13px;
 }
 
-/* ========================= */
-/* TABELA DOCUMENTOS */
-/* ========================= */
+/* TABELA */
 
 .table{
-background:#1c2330;
+background:var(--bg-panel);
+border:1px solid var(--border);
 border-radius:8px;
 overflow:hidden;
-border:1px solid #2a3446;
 }
 
 .row{
 display:grid;
-grid-template-columns: 140px 1.6fr 140px;
-gap: 20px;
-padding:14px 16px;
-border-bottom:1px solid #2a3446;
-font-size:13px;
+grid-template-columns: 130px 1fr 160px;
+align-items:center;
+padding:16px 18px;
+border-bottom:1px solid var(--border);
+font-size:14px;
+background:var(--bg-row);
 cursor:pointer;
 transition:0.2s;
 }
@@ -78,39 +80,44 @@ border-bottom:none;
 }
 
 .row:hover{
-background:#263248;
+background:var(--bg-row-hover);
+transform:scale(1.01);
 }
+
+/* HEADER */
 
 .row.header{
-background:#18202c;
+background:#141a24;
+color:var(--text-muted);
 font-weight:bold;
-color:#9aa3ad;
 cursor:default;
+transform:none;
 }
 
-.col{
-display:flex;
-align-items:center;
-padding-right:10px;
+/* COLUNAS */
+
+.col-date{
+font-weight:bold;
+color:#d7dce2;
 }
 
-.small{
-color:#cfd6e6;
+.col-type{
+color:#e6e6e6;
+line-height:1.4;
 }
 
-.link-row{
-text-decoration:none;
-color:inherit;
-display:contents;
+.col-ref{
+text-align:right;
+font-family:monospace;
+letter-spacing:1px;
+color:#c9d4e8;
 }
 
-/* ========================= */
-/* TEXTO INFERIOR */
-/* ========================= */
+/* TEXTO ABAIXO */
 
 .note{
 margin-top:25px;
-font-size:13px;
+font-size:14px;
 color:#aaa;
 line-height:1.6;
 }
@@ -131,34 +138,28 @@ Classificação: Não oficial
 <div class="table">
 
 <div class="row header">
-<div class="col">Data</div>
-<div class="col">Tipo de Documento</div>
-<div class="col">Referência</div>
+<div>Data</div>
+<div>Tipo de Documento</div>
+<div>Referência</div>
 </div>
 
-<a class="link-row" href="registro_orion_trust.pdf" target="_blank">
-<div class="row">
-<div class="col small">12/03/2024</div>
-<div class="col">Registro Financeiro Corporativo</div>
-<div class="col">TRX-8841</div>
+<div class="row" onclick="window.open('registro_orion_trust.pdf')">
+<div class="col-date">12/03/2024</div>
+<div class="col-type">Registro Financeiro Corporativo</div>
+<div class="col-ref">TRX-8841</div>
 </div>
-</a>
 
-<a class="link-row" href="comprovante_helix_ania.pdf" target="_blank">
-<div class="row">
-<div class="col small">18/03/2024</div>
-<div class="col">Comprovante Bancário</div>
-<div class="col">DOC-1192</div>
+<div class="row" onclick="window.open('comprovante_helix_ania.pdf')">
+<div class="col-date">18/03/2024</div>
+<div class="col-type">Comprovante Bancário</div>
+<div class="col-ref">DOC-1192</div>
 </div>
-</a>
 
-<a class="link-row" href="extrato_ania_petrova.pdf" target="_blank">
-<div class="row">
-<div class="col small">02/04/2024</div>
-<div class="col">Extrato Conta Corrente</div>
-<div class="col">ACC-4430</div>
+<div class="row" onclick="window.open('extrato_ania_petrova.pdf')">
+<div class="col-date">02/04/2024</div>
+<div class="col-type">Extrato de Conta Corrente</div>
+<div class="col-ref">ACC-4430</div>
 </div>
-</a>
 
 </div>
 
