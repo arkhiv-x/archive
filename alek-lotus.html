@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Caso Lotus — Arquivo Restrito</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+:root{
+--bg-main:#0f1218;
+--bg-panel:#1a1f27;
+--bg-dark:#12161c;
+--text-main:#e6e6e6;
+--text-muted:#9aa3ad;
+--accent:#3a5a8c;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:var(--bg-main);
+color:var(--text-main);
+}
+
+/* HEADER */
+
+header{
+background:var(--bg-dark);
+padding:18px 25px;
+border-bottom:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:13px;
+}
+
+/* MAIN */
+
+.main{
+max-width:900px;
+margin:auto;
+padding:40px 25px;
+}
+
+/* LOGIN */
+
+.login{
+background:var(--bg-panel);
+border:1px solid #222;
+padding:30px;
+max-width:420px;
+margin:auto;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:12px;
+border:none;
+border-radius:4px;
+font-size:14px;
+}
+
+button{
+margin-top:15px;
+padding:10px 15px;
+border:none;
+background:var(--accent);
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+/* FILES */
+
+.files{
+display:none;
+margin-top:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+}
+
+.folder{
+background:var(--bg-panel);
+border:1px solid #222;
+border-radius:6px;
+padding:25px;
+text-align:center;
+transition:.2s;
+}
+
+.folder:hover{
+border-color:var(--accent);
+transform:translateY(-3px);
+}
+
+.folder a{
+text-decoration:none;
+color:var(--text-main);
+display:block;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.name{
+font-size:14px;
+line-height:1.4;
+}
+
+/* PDF LIST */
+
+.list{
+margin-top:25px;
+background:var(--bg-panel);
+border:1px solid #222;
+}
+
+.item{
+padding:14px 16px;
+border-bottom:1px solid #222;
+cursor:pointer;
+transition:.15s;
+}
+
+.item:hover{
+background:#202631;
+}
+
+footer{
+margin-top:40px;
+text-align:center;
+font-size:12px;
+color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="arquivos-alek.html">← Voltar</a>
+</header>
+
+<div class="main">
+
+<h2>Arquivo Confidencial — Caso Lotus</h2>
+
+<p class="subtitle">
+Material paralelo mantido fora do registro institucional.
+</p>
+
+<!-- LOGIN -->
+
+<div class="login" id="loginBox">
+
+<p><strong>Acesso restrito</strong></p>
+
+<p style="margin-top:10px;font-size:13px;color:#aaa;">
+Dica: “A melhor parte de mim.”
+</p>
+
+<input type="password" id="senha" placeholder="Senha">
+
+<button onclick="entrar()">Acessar</button>
+
+<p id="erro" style="margin-top:10px;color:#c85b5b;display:none;">
+Senha incorreta
+</p>
+
+</div>
+
+<!-- FILES -->
+
+<div class="files" id="files">
+
+<div class="grid">
+
+<div class="folder">
+<a href="#depoimentos">
+<div class="icon">📂</div>
+<div class="name">Testemunhos<br>Coletados</div>
+</a>
+</div>
+
+<div class="folder">
+<a href="reconstrucao-lotus.html">
+<div class="icon">📂</div>
+<div class="name">Reconstrução<br>de Evento</div>
+</a>
+</div>
+
+<div class="folder">
+<a href="anotacoes-alek-lotus.html">
+<div class="icon">📂</div>
+<div class="name">Anotações<br>Pessoais</div>
+</a>
+</div>
+
+<div class="folder">
+<a href="relatorio-geral-lotus.html">
+<div class="icon">📂</div>
+<div class="name">Relatório Geral<br>Compilado</div>
+</a>
+</div>
+
+</div>
+
+
+<!-- PDF DEPOIMENTOS -->
+
+<div id="depoimentos" class="list">
+
+<div class="item" onclick="abrir('depoimento_pavel_voronin.pdf')">
+Depoimento — Pavel Voronin
+</div>
+
+<div class="item" onclick="abrir('depoimento_katerina_mirova.pdf')">
+Depoimento — Katerina Mirova
+</div>
+
+<div class="item" onclick="abrir('depoimento_oleg_baranov.pdf')">
+Depoimento — Oleg Baranov
+</div>
+
+</div>
+
+</div>
+
+<footer>
+ARKHIV-X — Sistema Monitorado
+</footer>
+
+</div>
+
+
+<script>
+
+function entrar(){
+
+let senha = document.getElementById("senha").value;
+
+if(senha === "Miya"){
+
+document.getElementById("loginBox").style.display="none";
+document.getElementById("files").style.display="block";
+
+}else{
+
+document.getElementById("erro").style.display="block";
+
+}
+
+}
+
+function abrir(pdf){
+
+window.open(pdf, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
