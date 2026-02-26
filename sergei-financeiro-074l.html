@@ -47,23 +47,60 @@ margin-bottom:30px;
 .table{
 background:var(--bg-panel);
 border:1px solid #222;
+border-radius:6px;
+overflow:hidden;
 }
 
 .row{
 display:flex;
 justify-content:space-between;
-padding:12px 14px;
+align-items:center;
+padding:14px 16px;
 border-bottom:1px solid #222;
 font-size:13px;
+}
+
+.row:last-child{
+border-bottom:none;
 }
 
 .row.header{
 color:var(--text-muted);
 font-weight:bold;
+background:#151a22;
+}
+
+.col{
+flex:1;
+}
+
+.col.small{
+flex:0.7;
+}
+
+.col.action{
+flex:0.6;
+text-align:right;
 }
 
 .highlight{
 color:#d4b24c;
+}
+
+.btn{
+background:#0e141c;
+border:1px solid #2a3545;
+padding:6px 10px;
+border-radius:4px;
+color:#9fb3d1;
+text-decoration:none;
+font-size:12px;
+transition:0.2s;
+}
+
+.btn:hover{
+border-color:var(--accent);
+color:white;
 }
 
 .note{
@@ -98,38 +135,51 @@ Classificação: Não oficial
 <div class="table">
 
 <div class="row header">
-<div>Data</div>
-<div>Origem</div>
-<div>Destino</div>
-<div>Valor</div>
+<div class="col small">Data</div>
+<div class="col">Origem</div>
+<div class="col">Destino</div>
+<div class="col small">Valor</div>
+<div class="col action">Documento</div>
 </div>
 
 <div class="row">
-<div>12/03/2024</div>
-<div>Orion Trust</div>
-<div>Helix Consulting</div>
-<div>$ 48.000</div>
+<div class="col small">12/03/2024</div>
+<div class="col">Orion Trust</div>
+<div class="col">Helix Consulting</div>
+<div class="col small">$ 48.000</div>
+<div class="col action">
+<a class="btn" href="registro_orion_trust.pdf" target="_blank">📄 Abrir</a>
+</div>
 </div>
 
 <div class="row">
-<div>18/03/2024</div>
-<div>Helix Consulting</div>
-<div class="highlight">A. Petrova</div>
-<div>$ 15.500</div>
+<div class="col small">18/03/2024</div>
+<div class="col">Helix Consulting</div>
+<div class="col highlight">A. Petrova</div>
+<div class="col small">$ 15.500</div>
+<div class="col action">
+<a class="btn" href="comprovante_helix_ania.pdf" target="_blank">📄 Abrir</a>
+</div>
 </div>
 
 <div class="row">
-<div>25/03/2024</div>
-<div>Orion Trust</div>
-<div>Helix Consulting</div>
-<div>$ 52.000</div>
+<div class="col small">25/03/2024</div>
+<div class="col">Orion Trust</div>
+<div class="col">Helix Consulting</div>
+<div class="col small">$ 52.000</div>
+<div class="col action">
+<a class="btn" href="registro_orion_trust.pdf" target="_blank">📄 Abrir</a>
+</div>
 </div>
 
 <div class="row">
-<div>02/04/2024</div>
-<div>Helix Consulting</div>
-<div class="highlight">A. Petrova</div>
-<div>$ 18.200</div>
+<div class="col small">02/04/2024</div>
+<div class="col">Helix Consulting</div>
+<div class="col highlight">A. Petrova</div>
+<div class="col small">$ 18.200</div>
+<div class="col action">
+<a class="btn" href="extrato_ania_petrova.pdf" target="_blank">📄 Abrir</a>
+</div>
 </div>
 
 </div>
